@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
      <a-button type="primary">
     Primary
   </a-button>
