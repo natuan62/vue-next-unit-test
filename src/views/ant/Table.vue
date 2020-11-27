@@ -1,6 +1,6 @@
 <template>
   <div>
-    ant table
+    <p>Ant Table</p>
     <a-table
       :columns="supportTableColumns"
       :data-source="rows"

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p>ant input</p>
+    <p>Ant Input</p>
     <div v-for="(item, index) in data" :key="item.id">
-      <p>input {{ index }}</p>
+      <p>Index {{ index }}</p>
       <input :value="item.name" placeholder="Basic usage" />
     </div>
   </div>

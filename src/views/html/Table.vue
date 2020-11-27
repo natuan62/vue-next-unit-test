@@ -1,6 +1,6 @@
 <template>
   <div>
-    html table
+    <p>Html Table</p>
     <table>
       <tr>
         <th v-for="item in supportTableColumns" :key="item.title">

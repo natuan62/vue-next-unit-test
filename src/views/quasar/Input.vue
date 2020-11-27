@@ -1,7 +1,7 @@
 <template>
-  <p>quasar input</p>
+  <p>Quasar Input</p>
   <div v-for="(item, index) in data" :key="item.id">
-    <p>input {{ index }}</p>
+    <p>Index {{ index }}</p>
     <q-input v-model="item.name" label="Standard" />
   </div>
 </template>

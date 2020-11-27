@@ -1,23 +1,46 @@
 <template>
   <div>
-    <p>ant select</p>
-    <a-select
-      v-model:value="value1"
-      style="width: 120px"
-    >
-      <a-select-option value="jack"> Jack </a-select-option>
-    </a-select>
+    <p>Ant Select</p>
+    <div v-for="(item, index) in data" :key="item.id">
+      <p>Index {{ index }}</p>
+      <a-select v-model:value="value1" style="width: 120px">
+        <a-select-option v-for="item in item.tags" :key="item" :value="item">
+          {{ item }}
+        </a-select-option>
+      </a-select>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
+  name: "AntSelect",
   setup() {
     const value1 = ref<string>("lucy");
+
+    const data = ref<unknown[]>([]);
+
+    for (let i = 0; i < 500; i++) {
+      data.value.push({
+        key: `${i + 1}`,
+        name: "Joe Black",
+        age: 32,
+        address: "Sidney No. 1 Lake Park",
+        tags: ["cool", "teacher"],
+      });
+    }
+
+    console.time("Ant Select");
+    
+    onMounted(() => {
+      console.timeEnd("Ant Select");
+    });
+
     return {
       value1,
+      data,
     };
   },
 });

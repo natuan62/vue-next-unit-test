@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>html input</p>
+    <p>Html Input</p>
     <div v-for="(item, index) in data" :key="item.id">
       <p>input {{ index }}</p>
       <input :value="item.name" placeholder="Basic usage" />
