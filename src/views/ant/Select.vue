@@ -3,7 +3,7 @@
     <p>Ant Select</p>
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <a-select v-model:value="value1" style="width: 120px">
+      <a-select v-model:value="value1">
         <a-select-option v-for="item in item.tags" :key="item" :value="item">
           {{ item }}
         </a-select-option>
@@ -22,7 +22,7 @@ export default defineComponent({
 
     const data = ref<unknown[]>([]);
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 100; i++) {
       data.value.push({
         key: `${i + 1}`,
         name: "Joe Black",
