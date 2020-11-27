@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import { Button, Table } from "ant-design-vue";
+import Antd from 'ant-design-vue';
 import router from "./router";
 import 'quasar/dist/quasar.css';
 import 'ant-design-vue/dist/antd.css';
@@ -60,8 +60,7 @@ import {
 
 const app = createApp(App);
 app.use(router);
-app.use(Button);
-app.use(Table);
+app.use(Antd);
 app.use(Quasar, {
   config: {},
   components: {

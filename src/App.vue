@@ -1,9 +1,22 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+     <p>HTML : 
+      <router-link to="/html-table">Table</router-link> |
+      <router-link to="/html-select">Select</router-link> |
+      <router-link to="/html-input">Input</router-link> |
+    </p>
+    <p>Ant Design : 
+      <router-link to="/ant-table">Table</router-link> |
+      <router-link to="/ant-select">Select</router-link> |
+      <router-link to="/ant-input">Input</router-link> |
+    </p>
+    <p>Quasar :
+      <router-link to="/quasar-table">Table</router-link> |
+      <router-link to="/quasar-select">Select</router-link> |
+      <router-link to="/quasar-input">Input</router-link> |
+    </p>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
