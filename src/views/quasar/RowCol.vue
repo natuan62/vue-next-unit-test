@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Quasar RowCol</p>
+    <render-time />
     <div class="row" v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <div class="col" v-for="item2 in item.tags" :key="item2.id">
@@ -12,10 +12,14 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "QuasarRowCol",
-  setup() {
+   components: {
+    "render-time": RenderTime,
+  },
+setup() {
     const value1 = ref<string>("lucy");
 
     const data = ref<unknown[]>([]);

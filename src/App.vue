@@ -17,27 +17,26 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "App",
- 
   setup() {
-    const routes: unknown[] = [
-      { link: "html", name: "HTML" },
-      { link: "ant", name: "Ant Design" },
-      { link: "quasar", name: "Quasar" },
-    ];
+    // const routes: unknown[] = [
+    //   { link: "html", name: "HTML" },
+    //   { link: "ant", name: "Ant Design" },
+    //   { link: "quasar", name: "Quasar" },
+    // ];
 
-    const types: unknown[] = [
-      { link: "table", name: "Table" },
-      { link: "select", name: "Select" },
-      { link: "input", name: "Input" },
-      { link: "rowcol", name: "RowCol" },
-      { link: "button", name: "Button" },
-      { link: "card", name: "Card" },
-      { link: "tabs", name: "Tabs" },
-    ];
+    // const types: unknown[] = [
+    //   { link: "table", name: "Table" },
+    //   { link: "select", name: "Select" },
+    //   { link: "input", name: "Input" },
+    //   { link: "rowcol", name: "RowCol" },
+    //   { link: "button", name: "Button" },
+    //   { link: "card", name: "Card" },
+    //   { link: "tabs", name: "Tabs" },
+    // ];
 
     return {
-      routes,
-      types,
+      // routes,
+      // types,
     };
   },
 });
@@ -63,5 +62,4 @@ export default defineComponent({
 #nav a.router-link-exact-active {
   color: #42b983;
 }
-
 </style>

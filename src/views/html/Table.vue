@@ -1,7 +1,6 @@
 <template>
   <div>
-    <p>Html Table</p>
-    <p>Render time: {{ time }} ms</p>
+    <render-time />
     <table>
       <tr>
         <th v-for="item in supportTableColumns" :key="item.title">
@@ -20,11 +19,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "vue";
+import { defineComponent } from "vue";
 import data from "../data.json";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "HtmlTable",
+  components: {
+    "render-time": RenderTime,
+  },
   setup() {
     const supportTableColumns = [
       {
@@ -69,22 +72,12 @@ export default defineComponent({
 
     const rows = data as unknown;
 
-    // console.time("Html Table");
-    const start = ref<number>(window.performance.now());
-    const time = ref<number>(0);
-
-
-    onMounted(() => {
-      const end = ref<number>(window.performance.now());
-      // console.timeEnd("Html Table");
-      time.value = end.value - start.value;
-      console.log('time', time.value);
-    });
+    // const time = useLogTime().time;
 
     return {
       supportTableColumns,
       rows,
-      time,
+      // time,
     };
   },
 });

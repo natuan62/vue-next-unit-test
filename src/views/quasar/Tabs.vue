@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Quasar Tabs</p>
+    <render-time />
     <div v-for="(item, index) in data" :key="index">
       <p>Index {{ index }}</p>
       <q-tabs v-model="tab">
@@ -22,9 +22,13 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "QuasarTabs",
+  components: {
+    "render-time": RenderTime,
+  },
   setup() {
     const data = ref<unknown[]>([]);
 

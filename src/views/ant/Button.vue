@@ -1,18 +1,24 @@
 <template>
   <div>
-    <p>Ant Button</p>
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <a-button v-for="(item2) in item.tags" :key="item2.id">... {{item2}} ...</a-button>
+      <a-button v-for="item2 in item.tags" :key="item2.id"
+        >... {{ item2 }} ...</a-button
+      >
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "AntButton",
+  components: {
+    "render-time": RenderTime,
+  },
   setup() {
     const data = ref<unknown[]>([]);
 

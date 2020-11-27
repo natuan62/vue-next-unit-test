@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Ant Table</p>
+    <render-time />
     <a-table
       :columns="supportTableColumns"
       :data-source="rows"
@@ -16,10 +16,14 @@
 <script lang="ts">
 import { defineComponent, onMounted } from "vue";
 import data from "../data.json";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "AntTable",
-  setup() {
+   components: {
+    "render-time": RenderTime,
+  },
+setup() {
     const supportTableColumns = [
       {
         title: "Key",

@@ -144,6 +144,7 @@ import QuasarRowCol from "@/views/quasar/RowCol.vue";
 import QuasarButton from "@/views/quasar/Button.vue";
 import QuasarCard from "@/views/quasar/Card.vue";
 import QuasarTabs from "@/views/quasar/Tabs.vue";
+
 export default defineComponent({
   name: "Home",
   components: {

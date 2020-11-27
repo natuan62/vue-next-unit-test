@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Ant Select</p>
+     <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <a-select v-model:value="value1">
@@ -21,10 +21,14 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "AntSelect",
-  setup() {
+   components: {
+    "render-time": RenderTime,
+  },
+setup() {
     const value1 = ref<string>("lucy");
 
     const data = ref<unknown[]>([]);

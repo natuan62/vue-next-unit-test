@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Ant Tabs</p>
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <a-tabs>
@@ -16,9 +16,13 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "AntTabs",
+  components: {
+    "render-time": RenderTime,
+  },
   setup() {
     const data = ref<unknown[]>([]);
 

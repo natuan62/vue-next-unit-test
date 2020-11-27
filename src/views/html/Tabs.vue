@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Html Tabs</p>
+     <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <button v-for="tab in item.tags" :key="tab" @click="selected = tab">
@@ -13,10 +13,14 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { onMounted } from "vue";
+import { onMounted } from "vue";import RenderTime from "@/components/RenderTime.vue";
+
 export default defineComponent({
   name: "HtmlTabs",
-  setup() {
+   components: {
+    "render-time": RenderTime,
+  },
+setup() {
     const data = ref<unknown[]>([]);
 
     const tabs: string[] = ["Home", "Contact"];

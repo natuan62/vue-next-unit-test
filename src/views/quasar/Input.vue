@@ -1,6 +1,6 @@
 <template>
-  <p>Quasar Input</p>
-  <div v-for="(item, index) in data" :key="item.id">
+   <render-time />
+    <div v-for="(item, index) in data" :key="item.id">
     <p>Index {{ index }}</p>
     <q-input v-model="item.name" label="Standard" />
   </div>
@@ -8,10 +8,14 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "QuasarInput",
-  setup() {
+   components: {
+    "render-time": RenderTime,
+  },
+setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 100; i++) {

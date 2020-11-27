@@ -1,14 +1,18 @@
 <template>
-  <div>quasar table</div>
+  <render-time />
   <q-table title="Treats" :data="data" :columns="columns" row-key="name" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "QuasarTable",
-  setup() {
+   components: {
+    "render-time": RenderTime,
+  },
+setup() {
     const columns = [
       {
         name: "name",

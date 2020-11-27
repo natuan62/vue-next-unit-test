@@ -1,16 +1,20 @@
 <template>
   <div>
-    <p>Html Card</p>
+    <render-time />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "HtmlCard",
-  setup() {
+   components: {
+    "render-time": RenderTime,
+  },
+setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 1000; i++) {

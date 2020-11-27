@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Ant Input</p>
+     <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <input :value="item.name" placeholder="Basic usage" />
@@ -11,10 +11,14 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
+import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "AntInput",
-  setup() {
+   components: {
+    "render-time": RenderTime,
+  },
+setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 100; i++) {
