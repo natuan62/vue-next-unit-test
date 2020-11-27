@@ -1,6 +1,13 @@
 <template>
-  <div>
+  <div class="wrapper">
     <p>Html Card</p>
+    <div v-for="(item, index) in data" :key="item.id">
+      <p>Index {{ index }}</p>
+      <div class="card">
+        <h5>Default size card</h5>
+        <p v-for="item2 in item.tags" :key="item2.id">{{ item2 }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -36,4 +43,16 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.wrapper {
+  margin-left: 15px;
+}
+
+h5 {
+  text-align: left;
+}
+
+.card {
+  border: 1px solid;
+  width: 200px;
+}
 </style>
