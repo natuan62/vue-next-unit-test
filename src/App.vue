@@ -30,6 +30,7 @@ export default defineComponent({
       { link: "input", name: "Input" },
       { link: "rowcol", name: "RowCol" },
       { link: "button", name: "Button" },
+      { link: "card", name: "Card" },
     ];
 
     return {
