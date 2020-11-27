@@ -1,24 +1,43 @@
 <template>
   <div id="nav">
-     <p>HTML : 
-      <router-link to="/html-table">Table</router-link> |
-      <router-link to="/html-select">Select</router-link> |
-      <router-link to="/html-input">Input</router-link> |
-    </p>
-    <p>Ant Design : 
-      <router-link to="/ant-table">Table</router-link> |
-      <router-link to="/ant-select">Select</router-link> |
-      <router-link to="/ant-input">Input</router-link> |
-    </p>
-    <p>Quasar :
-      <router-link to="/quasar-table">Table</router-link> |
-      <router-link to="/quasar-select">Select</router-link> |
-      <router-link to="/quasar-input">Input</router-link> |
+    <p v-for="item in routes" :key="item.id">
+      {{ item.name }} :
+      <span v-for="type in types" :key="type.id">
+        <router-link :to="`/${item.link}-${type.link}`">{{
+          type.name
+        }}</router-link>
+        |
+      </span>
     </p>
   </div>
   <router-view />
 </template>
+<script lang="ts">
+import { defineComponent } from "vue";
 
+export default defineComponent({
+  name: "App",
+  setup() {
+    const routes: unknown[] = [
+      { link: "html", name: "HTML" },
+      { link: "ant", name: "Ant Design" },
+      { link: "quasar", name: "Quasar" },
+    ];
+
+    const types: unknown[] = [
+      { link: "table", name: "Table" },
+      { link: "select", name: "Select" },
+      { link: "input", name: "Input" },
+      { link: "rowcol", name: "RowCol" },
+    ];
+
+    return {
+      routes,
+      types,
+    };
+  },
+});
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
