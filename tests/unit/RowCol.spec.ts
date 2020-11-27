@@ -17,10 +17,10 @@ describe("RowCol", () => {
   // });
 
   test("renders RowCol with HTML", async () => {
-    console.time("Html RowCol");
+    console.time("Render Html RowCol");
     const wrapper = mount(HtmlRowCol);
     await wrapper.vm.$nextTick();
-    console.timeEnd("Html RowCol");
+    console.timeEnd("Render Html RowCol");
 
     expect(true).toBe(true);
   });

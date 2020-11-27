@@ -8,22 +8,22 @@ import HtmlInput from "@/views/html/Input.vue";
 
 describe("Input", () => {
   test("renders Input with Ant", async () => {
-    console.time("Ant Input");
+    console.time("Render Ant Input");
     const wrapper = mount(AntInput, {
       global: {
         plugins: [Antd],
       },
     });
     await wrapper.vm.$nextTick();
-    console.timeEnd("Ant Input");
+    console.timeEnd("Render Ant Input");
     expect(true).toBe(true);
   });
 
   test("renders Input with HTML", async () => {
-    console.time("Html Input");
+    console.time("Render Html Input");
     const wrapper = mount(HtmlInput);
     await wrapper.vm.$nextTick();
-    console.timeEnd("Html Input");
+    console.timeEnd("Render Html Input");
 
     expect(true).toBe(true);
   });

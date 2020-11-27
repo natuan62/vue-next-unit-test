@@ -5,22 +5,22 @@ import HtmlButton from "@/views/html/Button.vue";
 
 describe("Button", () => {
   test("renders Button with Ant", async () => {
-    console.time("Ant Button");
+    console.time("Render Ant Button");
     const wrapper = mount(AntButton, {
       global: {
         plugins: [Antd],
       },
     });
     await wrapper.vm.$nextTick();
-    console.timeEnd("Ant Button");
+    console.timeEnd("Render Ant Button");
     expect(true).toBe(true);
   });
 
   test("renders Button with HTML", async () => {
-    console.time("Html Button");
+    console.time("Render Html Button");
     const wrapper = mount(HtmlButton);
     await wrapper.vm.$nextTick();
-    console.timeEnd("Html Button");
+    console.timeEnd("Render Html Button");
 
     expect(true).toBe(true);
   });
