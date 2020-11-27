@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>Html Table</p>
+    <p>Render time: {{ time }} ms</p>
     <table>
       <tr>
         <th v-for="item in supportTableColumns" :key="item.title">
@@ -19,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import data from "../data.json";
 
 export default defineComponent({
@@ -68,14 +69,22 @@ export default defineComponent({
 
     const rows = data as unknown;
 
-    console.time("Html Table");
+    // console.time("Html Table");
+    const start = ref<number>(window.performance.now());
+    const time = ref<number>(0);
+
+
     onMounted(() => {
-      console.timeEnd("Html Table");
+      const end = ref<number>(window.performance.now());
+      // console.timeEnd("Html Table");
+      time.value = end.value - start.value;
+      console.log('time', time.value);
     });
 
     return {
       supportTableColumns,
       rows,
+      time,
     };
   },
 });

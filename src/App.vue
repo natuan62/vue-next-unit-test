@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <p v-for="item in routes" :key="item.id">
+    <!-- <p v-for="item in routes" :key="item.id">
       {{ item.name }} :
       <span v-for="type in types" :key="type.id">
         <router-link :to="`/${item.link}-${type.link}`">{{
@@ -8,7 +8,7 @@
         }}</router-link>
         |
       </span>
-    </p>
+    </p> -->
   </div>
   <router-view />
 </template>
@@ -17,6 +17,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "App",
+ 
   setup() {
     const routes: unknown[] = [
       { link: "html", name: "HTML" },
@@ -62,4 +63,5 @@ export default defineComponent({
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>

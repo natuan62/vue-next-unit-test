@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import Antd from "ant-design-vue";
-import AntRowCol from "@/views/ant/RowCol.vue";
+// import AntRowCol from "@/views/ant/RowCol.vue";
 import HtmlRowCol from "@/views/html/RowCol.vue";
 
 describe("RowCol", () => {
