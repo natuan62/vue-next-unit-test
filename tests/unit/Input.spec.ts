@@ -1,10 +1,10 @@
 import { mount } from "@vue/test-utils";
 import Antd from "ant-design-vue";
-import { mountQuasar } from "@quasar/quasar-app-extension-testing-unit-jest";
-import { QInput } from "quasar";
+// import { mountQuasar } from "@quasar/quasar-app-extension-testing-unit-jest";
+// import { QInput } from "quasar";
 import AntInput from "@/views/ant/Input.vue";
 import HtmlInput from "@/views/html/Input.vue";
-import QuasarInput from "@/views/quasar/Input.vue";
+// import QuasarInput from "@/views/quasar/Input.vue";
 
 describe("Input", () => {
   test("renders Input with Ant", async () => {
@@ -28,17 +28,17 @@ describe("Input", () => {
     expect(true).toBe(true);
   });
 
-  test("renders Input with Quasar", async () => {
-    console.time("Quasar Input");
-    mountQuasar(QuasarInput, {
-      quasar: {
-        components: {
-          QInput,
-        },
-      },
-    });
-    console.timeEnd("Quasar Input");
+  // test("renders Input with Quasar", async () => {
+  //   console.time("Quasar Input");
+  //   mountQuasar(QuasarInput, {
+  //     quasar: {
+  //       components: {
+  //         QInput,
+  //       },
+  //     },
+  //   });
+  //   console.timeEnd("Quasar Input");
 
-    expect(true).toBe(true);
-  });
+  //   expect(true).toBe(true);
+  // });
 });

@@ -82,11 +82,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "QuasarButton",
     component: () => import("../views/quasar/Button.vue"),
   },
-  // {
-  //   path: "/html-card",
-  //   name: "Htmlcard",
-  //   component: () => import("../views/html/Card.vue"),
-  // },
+  {
+    path: "/html-card",
+    name: "Htmlcard",
+    component: () => import("../views/html/Card.vue"),
+  },
   {
     path: "/ant-card",
     name: "Antcard",
@@ -96,6 +96,21 @@ const routes: Array<RouteRecordRaw> = [
     path: "/quasar-card",
     name: "Quasarcard",
     component: () => import("../views/quasar/Card.vue"),
+  },
+  {
+    path: "/html-tabs",
+    name: "Htmltabs",
+    component: () => import("../views/html/Tabs.vue"),
+  },
+  {
+    path: "/ant-tabs",
+    name: "Anttabs",
+    component: () => import("../views/ant/Tabs.vue"),
+  },
+  {
+    path: "/quasar-tabs",
+    name: "Quasartabs",
+    component: () => import("../views/quasar/Tabs.vue"),
   },
 ];
 

@@ -1,21 +1,23 @@
 <template>
   <div>
-    <p>Html Select</p>
+    <p>Ant Tabs</p>
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <select name="cars" id="cars">
-        <option value="volvo" v-for="(item) in item.tags" :key="item">
-          {{item}}
-        </option>
-      </select>
+      <a-tabs>
+        <a-tab-pane key="1" tab="Tab 1"> Content of Tab Pane 1 </a-tab-pane>
+        <a-tab-pane key="2" tab="Tab 2"> Content of Tab Pane 2 </a-tab-pane>
+        <a-tab-pane key="3" tab="Tab 3"> Content of Tab Pane 3 </a-tab-pane>
+      </a-tabs>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "vue";
+import { defineComponent, ref } from "vue";
+import { onMounted } from "vue";
 
 export default defineComponent({
+  name: "AntTabs",
   setup() {
     const data = ref<unknown[]>([]);
 
@@ -29,10 +31,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Html Select");
-
+    console.time("Ant Tabs");
     onMounted(() => {
-      console.timeEnd("Html Select");
+      console.timeEnd("Ant Tabs");
     });
 
     return {

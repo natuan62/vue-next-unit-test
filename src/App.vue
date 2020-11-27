@@ -31,6 +31,7 @@ export default defineComponent({
       { link: "rowcol", name: "RowCol" },
       { link: "button", name: "Button" },
       { link: "card", name: "Card" },
+      { link: "tabs", name: "Tabs" },
     ];
 
     return {

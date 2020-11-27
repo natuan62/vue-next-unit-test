@@ -16,8 +16,6 @@ import { defineComponent, onMounted, ref } from "vue";
 export default defineComponent({
   name: "HtmlRowCol",
   setup() {
-    const value1 = ref<string>("lucy");
-
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 100; i++) {
@@ -37,7 +35,6 @@ export default defineComponent({
     });
 
     return {
-      value1,
       data,
     };
   },
