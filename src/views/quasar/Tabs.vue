@@ -1,32 +1,20 @@
 <template>
   <div>
     <p>Quasar Tabs</p>
-    <div v-for="(item, index) in data" :key="item.id">
+    <div v-for="(item, index) in data" :key="index">
       <p>Index {{ index }}</p>
-      <q-list bordered class="rounded-borders">
-        <q-expansion-item
-          expand-separator
-          label="Account settings"
-          caption="John Doe"
-        >
-          <q-card>
-            <q-card-section>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
-            </q-card-section>
-          </q-card>
-        </q-expansion-item>
-        <q-expansion-item
-          expand-separator
-          label="Account settings"
-          caption="John Doe"
-        >
-          <q-card>
-            <q-card-section>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
-            </q-card-section>
-          </q-card>
-        </q-expansion-item>
-      </q-list>
+      <q-tabs v-model="tab">
+        <q-tab label="Tab 1" :name="`tab1${index}`" />
+        <q-tab label="Tab 2" :name="`tab2${index}`" />
+        <q-tab label="Tab 3" :name="`tab3${index}`" />
+        <q-tab label="Tab 4" :name="`tab4${index}`" />
+      </q-tabs>
+      <q-tab-panels v-model="tab" animated>
+        <q-tab-panel :name="`tab1${index}`"> Tab1 content </q-tab-panel>
+        <q-tab-panel :name="`tab2${index}`"> Tab2 content </q-tab-panel>
+        <q-tab-panel :name="`tab3${index}`"> Tab3 content </q-tab-panel>
+        <q-tab-panel :name="`tab4${index}`"> Tab4 content </q-tab-panel>
+      </q-tab-panels>
     </div>
   </div>
 </template>
@@ -40,15 +28,14 @@ export default defineComponent({
   setup() {
     const data = ref<unknown[]>([]);
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 100; i++) {
       data.value.push({
         key: `${i + 1}`,
-        name: "Joe Black",
-        age: 32,
-        address: "Sidney No. 1 Lake Park",
-        tags: ["cool", "teacher"],
+        tabs: ["tab 1", "tab 2", "tab 3"],
       });
     }
+
+    const tab = ref<string>("mails");
 
     console.time("Quasar Tabs");
     onMounted(() => {
@@ -57,6 +44,7 @@ export default defineComponent({
 
     return {
       data,
+      tab,
     };
   },
 });

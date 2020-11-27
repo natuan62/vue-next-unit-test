@@ -4,9 +4,10 @@
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <a-tabs>
-        <a-tab-pane key="1" tab="Tab 1"> Content of Tab Pane 1 </a-tab-pane>
-        <a-tab-pane key="2" tab="Tab 2"> Content of Tab Pane 2 </a-tab-pane>
-        <a-tab-pane key="3" tab="Tab 3"> Content of Tab Pane 3 </a-tab-pane>
+        <a-tab-pane key="1" tab="Tab 1"> Content Tab 1 </a-tab-pane>
+        <a-tab-pane key="2" tab="Tab 2"> Content Tab 2 </a-tab-pane>
+        <a-tab-pane key="3" tab="Tab 3"> Content Tab 3 </a-tab-pane>
+        <a-tab-pane key="4" tab="Tab 4"> Content Tab 4 </a-tab-pane>
       </a-tabs>
     </div>
   </div>
@@ -24,10 +25,7 @@ export default defineComponent({
     for (let i = 0; i < 100; i++) {
       data.value.push({
         key: `${i + 1}`,
-        name: "Joe Black",
-        age: 32,
-        address: "Sidney No. 1 Lake Park",
-        tags: ["cool", "teacher"],
+        tabs: ["tab 1", "tab 2", "tab 3"],
       });
     }
 

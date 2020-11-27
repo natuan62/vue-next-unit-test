@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import data from "../data.json";
 
 export default defineComponent({
@@ -91,8 +91,10 @@ export default defineComponent({
 
     const paginationTable = false;
 
-    // onMounted(() => {
-    // });
+    console.time("Ant Table");
+    onMounted(() => {
+      console.timeEnd("Ant Table");
+    });
 
     return {
       paginationTable,
