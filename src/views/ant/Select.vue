@@ -8,6 +8,13 @@
           {{ item }}
         </a-select-option>
       </a-select>
+      <!-- <a-select-option value="cool">
+          cool
+        </a-select-option>
+        <a-select-option value="techer">
+          teacher
+        </a-select-option>
+      </a-select> -->
     </div>
   </div>
 </template>
@@ -33,7 +40,7 @@ export default defineComponent({
     }
 
     console.time("Ant Select");
-    
+
     onMounted(() => {
       console.timeEnd("Ant Select");
     });
