@@ -1,5 +1,7 @@
 <template>
-  <div>Render time: <b>[ {{ time }} ]</b> ms</div>
+  <div class="render">
+    * Render time: <b>[ {{ time }} ]</b> ms
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -18,4 +20,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.render {
+  margin-bottom: 25px;
+}
 </style>
