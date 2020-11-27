@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <p>Click each button to display the corresponding component.</p>
     <button
       v-for="(type, index) in types"
       :key="type.id"
@@ -211,6 +212,12 @@ button {
 .column {
   float: left;
   width: 33.33%;
+  padding-left: 15px;
+  border-right: 1px solid;
+}
+
+.column:last-child {
+  border-right: none;
 }
 
 .row {

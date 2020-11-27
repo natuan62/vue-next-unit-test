@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from "vue";
-import data from "../data.json";
+import data from "../data1.json";
 import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
