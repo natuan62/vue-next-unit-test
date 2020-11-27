@@ -1,25 +1,44 @@
 <template>
   <div>quasar table</div>
-  <q-table :data="data" :columns="columns" row-key="name" />
+  <q-table title="Treats" :data="data" :columns="columns" row-key="name" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { ref } from "vue";
 
 export default defineComponent({
   name: "QuasarTable",
   setup() {
-    const columns: unknown[] = [
+    const columns = [
+      {
+        name: "name",
+        required: true,
+        label: "Dessert (100g serving)",
+        align: "left",
+        field: "name",
+      },
       {
         name: "calories",
+        align: "center",
         label: "Calories",
         field: "calories",
       },
       { name: "fat", label: "Fat (g)", field: "fat" },
+      { name: "carbs", label: "Carbs (g)", field: "carbs" },
+      { name: "protein", label: "Protein (g)", field: "protein" },
+      { name: "sodium", label: "Sodium (mg)", field: "sodium" },
+      {
+        name: "calcium",
+        label: "Calcium (%)",
+        field: "calcium",
+      },
+      {
+        name: "iron",
+        label: "Iron (%)",
+        field: "iron",
+      },
     ];
-
-    const data = ref([
+    const data = [
       {
         name: "Frozen Yogurt",
         calories: 159,
@@ -120,26 +139,10 @@ export default defineComponent({
         calcium: "12%",
         iron: "6%",
       },
-    ]);
-
-    const model = null;
-
-    const options: string[] = [
-      "Google",
-      "Facebook",
-      "Twitter",
-      "Apple",
-      "Oracle",
     ];
-
-    const val = ref<boolean>(true);
-
     return {
       columns,
       data,
-      model,
-      options,
-      val,
     };
   },
 });

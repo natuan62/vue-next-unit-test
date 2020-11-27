@@ -4,4 +4,5 @@ module.exports = {
     '^.+\\.vue$': 'vue-jest'
   },
   transformIgnorePatterns: ['/node_modules/(?!lodash-es)'],
+  moduleFileExtensions: ['vue', 'js', 'json', 'jsx', 'ts', 'tsx', 'node'],
 }

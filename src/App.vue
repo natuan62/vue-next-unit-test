@@ -29,6 +29,7 @@ export default defineComponent({
       { link: "select", name: "Select" },
       { link: "input", name: "Input" },
       { link: "rowcol", name: "RowCol" },
+      { link: "button", name: "Button" },
     ];
 
     return {

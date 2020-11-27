@@ -67,6 +67,21 @@ const routes: Array<RouteRecordRaw> = [
     name: "Quasarrowcol",
     component: () => import("../views/quasar/RowCol.vue"),
   },
+  {
+    path: "/html-button",
+    name: "HtmlButton",
+    component: () => import("../views/html/Button.vue"),
+  },
+  {
+    path: "/ant-button",
+    name: "AntButton",
+    component: () => import("../views/ant/Button.vue"),
+  },
+  {
+    path: "/quasar-button",
+    name: "QuasarButton",
+    component: () => import("../views/quasar/Button.vue"),
+  },
 ];
 
 const router = createRouter({
