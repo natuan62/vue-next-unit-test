@@ -9,7 +9,7 @@
       {{ index + 1 }}. {{ type.name }}
     </button>
     <p v-if="clickedButton">
-      *** Clicked [<b>{{ clickedButton }}</b
+      Clicked [<b>{{ clickedButton }}</b
       >] button.
     </p>
 
@@ -35,7 +35,7 @@
         <element-table />
       </div>
     </div>
-
+<!-- 
     <div class="row" v-if="clickedButton === 'select'">
       <div class="column">
         <p><b>HTML</b></p>
@@ -175,7 +175,7 @@
         <p><b>Element-plus Framework</b></p>
         <element-tabs />
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -185,8 +185,10 @@ const AntTable = defineAsyncComponent(() => import("@/views/ant/Table.vue"));
 const AntSelect = defineAsyncComponent(() => import("@/views/ant/Select.vue"));
 const AntInput = defineAsyncComponent(() => import("@/views/ant/Input.vue"));
 const AntRowCol = defineAsyncComponent(() => import("@/views/ant/RowCol.vue"));
+const AntButton = defineAsyncComponent(() => import("@/views/ant/Button.vue"));
 const AntCard = defineAsyncComponent(() => import("@/views/ant/Card.vue"));
 const AntTabs = defineAsyncComponent(() => import("@/views/ant/Tabs.vue"));
+
 const HtmlTable = defineAsyncComponent(() => import("@/views/html/Table.vue"));
 const HtmlSelect = defineAsyncComponent(() =>
   import("@/views/html/Select.vue")
@@ -195,8 +197,12 @@ const HtmlInput = defineAsyncComponent(() => import("@/views/html/Input.vue"));
 const HtmlRowCol = defineAsyncComponent(() =>
   import("@/views/html/RowCol.vue")
 );
+const HtmlButton = defineAsyncComponent(() =>
+  import("@/views/html/Button.vue")
+);
 const HtmlCard = defineAsyncComponent(() => import("@/views/html/Card.vue"));
 const HtmlTabs = defineAsyncComponent(() => import("@/views/html/Tabs.vue"));
+
 const QuasarTable = defineAsyncComponent(() =>
   import("@/views/quasar/Table.vue")
 );
@@ -209,6 +215,9 @@ const QuasarInput = defineAsyncComponent(() =>
 const QuasarRowCol = defineAsyncComponent(() =>
   import("@/views/quasar/RowCol.vue")
 );
+const QuasarButton = defineAsyncComponent(() =>
+  import("@/views/quasar/Button.vue")
+);
 const QuasarCard = defineAsyncComponent(() =>
   import("@/views/quasar/Card.vue")
 );
@@ -216,15 +225,10 @@ const QuasarTabs = defineAsyncComponent(() =>
   import("@/views/quasar/Tabs.vue")
 );
 
-const HtmlButton = defineAsyncComponent(() =>
-  import("@/views/html/Button.vue")
+const PrimeTable = defineAsyncComponent(() =>
+  // import("@/views/prime/Table.vue")
+  import('./prime/Table.vue')
 );
-const AntButton = defineAsyncComponent(() => import("@/views/ant/Button.vue"));
-const QuasarButton = defineAsyncComponent(() =>
-  import("@/views/quasar/Button.vue")
-);
-
-const PrimeTable = defineAsyncComponent(() => import("./prime/Table.vue"));
 
 const PrimeSelect = defineAsyncComponent(() =>
   import("@/views/prime/Select.vue")
@@ -290,21 +294,21 @@ export default defineComponent({
     "quasar-card": QuasarCard,
     "quasar-tabs": QuasarTabs,
 
-    "element-table": ElementTable,
-    "element-select": ElementSelect,
-    "element-input": ElementInput,
-    "element-rowcol": ElementRowCol,
-    "element-button": ElementButton,
-    "element-card": ElementCard,
-    "element-tabs": ElementTabs,
+    // "element-table": ElementTable,
+    // "element-select": ElementSelect,
+    // "element-input": ElementInput,
+    // "element-rowcol": ElementRowCol,
+    // "element-button": ElementButton,
+    // "element-card": ElementCard,
+    // "element-tabs": ElementTabs,
 
     "prime-table": PrimeTable,
-    "prime-select": PrimeSelect,
-    "prime-input": PrimeInput,
-    "prime-rowcol": PrimeRowCol,
-    "prime-button": PrimeButton,
-    "prime-card": PrimeCard,
-    "prime-tabs": PrimeTabs,
+    // "prime-select": PrimeSelect,
+    // "prime-input": PrimeInput,
+    // "prime-rowcol": PrimeRowCol,
+    // "prime-button": PrimeButton,
+    // "prime-card": PrimeCard,
+    // "prime-tabs": PrimeTabs,
   },
   setup() {
     // const routes: unknown[] = [
@@ -363,10 +367,5 @@ button {
   content: "";
   display: table;
   clear: both;
-}
-
-p {
-  text-align: left;
-  margin-left: 10px;
 }
 </style>

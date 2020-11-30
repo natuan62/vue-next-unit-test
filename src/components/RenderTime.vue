@@ -1,6 +1,6 @@
 <template>
   <div class="render">
-    * Render time: <b>[ {{ time }} ]</b> ms
+    <p>* Render time: <b>[ {{ time }} ]</b> ms</p>
   </div>
 </template>
 <script lang="ts">

@@ -1,6 +1,6 @@
 <template>
-   <render-time />
-    <div v-for="(item, index) in data" :key="item.id">
+  <render-time />
+  <div v-for="(item, index) in data" :key="item.id">
     <p>Index {{ index }}</p>
     <q-select v-model="value1" :options="item.tags" label="Standard" />
   </div>
@@ -8,19 +8,16 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
-import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
   name: "QuasarSelect",
-   components: {
-    "render-time": RenderTime,
-  },
-setup() {
+
+  setup() {
     const value1 = ref<string>("lucy");
 
     const data = ref<unknown[]>([]);
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 200; i++) {
       data.value.push({
         key: `${i + 1}`,
         name: "Joe Black",
@@ -44,5 +41,4 @@ setup() {
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

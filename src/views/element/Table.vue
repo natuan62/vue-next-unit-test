@@ -1,65 +1,62 @@
 <template>
   <div>
+    <p>Element Table</p>
     <render-time />
-    <a-table
-      :columns="supportTableColumns"
-      :data-source="rows"
-      :pagination="paginationTable"
-    >
-      <template #name="{ text }">
-        <a>{{ text }}</a>
-      </template>
-    </a-table>
+    <el-table :data="rows" style="width: 100%">
+      <el-table-column
+        v-for="item in tableColumns"
+        :key="item.id"
+        :prop="item.key"
+        :label="item.title"
+        width="180"
+      >
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted } from "vue";
-import data from "../data1.json";
+import data from "../data3.json";
 
 export default defineComponent({
-  name: "AntTable",
+  name: "ElementTable",
   setup() {
-    const supportTableColumns = [
+    const tableColumns = [
       {
         title: "Key",
-        dataIndex: "key",
         key: "key",
       },
       {
         title: "Name",
-        dataIndex: "name",
         key: "name",
       },
       {
         title: "Age",
-        dataIndex: "age",
         key: "age",
       },
       {
         title: "Address",
-        dataIndex: "address",
         key: "address",
       },
       {
-        title: "Tags",
-        key: "tags",
-        dataIndex: "tags",
-        slots: { customRender: "tags" },
+        title: "Tag",
+        key: "tag",
       },
     ];
+
     const rows = data as unknown;
 
     const paginationTable = false;
 
-    console.time("Ant Table");
+    console.time("Element Table");
     onMounted(() => {
-      console.timeEnd("Ant Table");
+      console.timeEnd("Element Table");
     });
 
     return {
       paginationTable,
-      supportTableColumns,
+      tableColumns,
       rows,
     };
   },

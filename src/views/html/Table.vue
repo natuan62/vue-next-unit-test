@@ -21,13 +21,11 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import data from "../data.json";
-import RenderTime from "@/components/RenderTime.vue";
+
 
 export default defineComponent({
   name: "HtmlTable",
-  components: {
-    "render-time": RenderTime,
-  },
+  
   setup() {
     const supportTableColumns = [
       {
@@ -60,7 +58,7 @@ export default defineComponent({
 
     // const rows = ref<any[]>([]);
 
-    // for (let i = 0; i < 10000; i++) {
+    // for (let i = 0; i < 2000; i++) {
     //   rows.value.push({
     //     key: `${i + 1}`,
     //     name: 'Joe Black',

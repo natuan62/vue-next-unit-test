@@ -1,11 +1,15 @@
 <template>
   <div>
-     <render-time />
+    <p>Prime Input</p>
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <a-card title="Default size card" style="width: 300px">
-        <p v-for="item2 in item.tags" :key="item2.id">{{ item2 }}</p>
-      </a-card>
+      <!-- <input :value="item.name" placeholder="Basic usage" /> -->
+      <PInputText
+        type="text"
+        v-model="item.name"
+        placeholder="Prime Vue input"
+      />
     </div>
   </div>
 </template>
@@ -14,11 +18,9 @@
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
 
-
 export default defineComponent({
-  name: "AntCard",
-   
-setup() {
+  name: "PrimeInput",
+  setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {
@@ -31,9 +33,9 @@ setup() {
       });
     }
 
-    console.time("Ant Card");
+    console.time("Prime Input");
     onMounted(() => {
-      console.timeEnd("Ant Card");
+      console.timeEnd("Prime Input");
     });
 
     return {
@@ -43,6 +45,4 @@ setup() {
 });
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,119 +1,80 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import Antd from 'ant-design-vue';
 import router from "./router";
-import 'quasar/dist/quasar.css';
-import 'ant-design-vue/dist/antd.css';
+// ant
+import Antd from "ant-design-vue";
+// quasar
+import "quasar/dist/quasar.css";
+import "ant-design-vue/dist/antd.css";
 import {
   Quasar,
-  QLayout,
-  QHeader,
-  QDrawer,
-  QPageContainer,
-  QPage,
-  QToolbar,
-  QToolbarTitle,
   QBtn,
-  QBtnGroup,
-  QIcon,
-  QList,
-  QItem,
-  QItemSection,
-  QItemLabel,
-  QMenu,
-  QBtnDropdown,
-  QAvatar,
-  QSeparator,
-  QSpace,
-  QForm,
   QInput,
-  QImg,
   QCheckbox,
-  QTooltip,
-  QBadge,
   QTabs,
-  QRouteTab,
   QSelect,
-  QToggle,
-  QDialog,
-  QCardActions,
-  QSlider,
   QTab,
-  QTabPanel,
-  QTabPanels,
   QCard,
-  QCardSection,
   QTable,
-  QCircularProgress,
-  QTh,
-  QTr,
-  QTd,
-  QBreadcrumbs,
-  QBreadcrumbsEl,
-  QVirtualScroll,
-  QExpansionItem,
-  QBtnToggle,
-  QChip,
-  QPopupProxy,
-  QColor,
 } from "quasar";
 
+// equal
+// import { Button, Alert, Switch } from 'equal-vue'
+// import 'equal-vue/dist/equal.css'
+
+// primeVue
+import "primevue/resources/primevue.min.css";
+import "primeicons/primeicons.css";
+
+import "primeflex/primeflex.css";
+import "primevue/resources/themes/saga-blue/theme.css";
+
+// element-plus
+import ElementPlus from 'element-plus';
+import 'element-plus/lib/theme-chalk/index.css';
+
+import PButton from "primevue/button";
+import PTable from "primevue/datatable";
+import PColumn from "primevue/column";
+import PDropdown from "primevue/dropdown";
+import PInputText from "primevue/inputtext";
+import PCard from "primevue/card";
+import PTabView from "primevue/tabview";
+import PTabPanel from "primevue/tabpanel";
+
+import RenderTime from "@/components/RenderTime.vue";
+
 const app = createApp(App);
+
 app.use(router);
+
+// ant
 app.use(Antd);
+
+// equal
+// app.use(Button);
+// app.use(Alert);
+// app.use(Switch);
+
+// quasar
 app.use(Quasar, {
   config: {},
-  components: {
-    QLayout,
-    QHeader,
-    QDrawer,
-    QPageContainer,
-    QPage,
-    QToolbar,
-    QToolbarTitle,
-    QBtn,
-    QBtnGroup,
-    QIcon,
-    QList,
-    QItem,
-    QItemSection,
-    QItemLabel,
-    QMenu,
-    QBtnDropdown,
-    QAvatar,
-    QSeparator,
-    QSpace,
-    QForm,
-    QInput,
-    QImg,
-    QCheckbox,
-    QTooltip,
-    QBadge,
-    QTabs,
-    QRouteTab,
-    QSelect,
-    QToggle,
-    QDialog,
-    QCard,
-    QCardActions,
-    QCardSection,
-    QSlider,
-    QTab,
-    QTabPanel,
-    QTabPanels,
-    QTable,
-    QCircularProgress,
-    QTh,
-    QTr,
-    QTd,
-    QBreadcrumbs,
-    QBreadcrumbsEl,
-    QVirtualScroll,
-    QExpansionItem,
-    QBtnToggle,
-    QChip,
-    QPopupProxy,
-    QColor,
-  },
+  components: { QBtn, QInput, QCheckbox, QTabs, QSelect, QCard, QTab, QTable },
 });
+
+// prime
+app.component("PButton", PButton);
+app.component("PTable", PTable);
+app.component("PColumn", PColumn);
+app.component("PDropdown", PDropdown);
+app.component("PInputText", PInputText);
+app.component("PCard", PCard);
+app.component("PTabView", PTabView);
+app.component("PTabPanel", PTabPanel);
+
+app.component("render-time", RenderTime);
+
+// element-plus
+app.use(ElementPlus);
+
 app.mount("#app");

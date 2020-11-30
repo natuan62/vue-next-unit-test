@@ -1,11 +1,11 @@
 <template>
   <div>
-     <render-time />
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <select name="cars" id="cars">
-        <option value="volvo" v-for="(item) in item.tags" :key="item">
-          {{item}}
+        <option value="volvo" v-for="item in item.tags" :key="item">
+          {{ item }}
         </option>
       </select>
     </div>
@@ -14,16 +14,12 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
-import RenderTime from "@/components/RenderTime.vue";
 
 export default defineComponent({
-   components: {
-    "render-time": RenderTime,
-  },
-setup() {
+  setup() {
     const data = ref<unknown[]>([]);
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 200; i++) {
       data.value.push({
         key: `${i + 1}`,
         name: "Joe Black",
@@ -46,5 +42,4 @@ setup() {
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

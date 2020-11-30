@@ -1,25 +1,27 @@
 <template>
   <div>
+    <p>Prime Select</p>
     <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <q-card class="my-card">
-        <q-card-section v-for="item2 in item.tags" :key="item2.id">
-          {{ item2 }}
-        </q-card-section>
-      </q-card>
+      <PDropdown
+        v-model="value1"
+        :options="item.tags"
+        optionLabel="name"
+        placeholder="Select"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import { onMounted } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: "QuasarCard",
-
+  name: "PrimeSelect",
   setup() {
+    const value1 = ref<string>("lucy");
+
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {
@@ -28,16 +30,26 @@ export default defineComponent({
         name: "Joe Black",
         age: 32,
         address: "Sidney No. 1 Lake Park",
-        tags: ["cool", "teacher"],
+        tags: [
+          {
+            name: "cool",
+            code: "cool",
+          },
+          {
+            name: "teacher",
+            code: "teacher",
+          },
+        ],
       });
     }
 
-    console.time("Quasar Card");
+    console.time("Prime Select");
     onMounted(() => {
-      console.timeEnd("Quasar Card");
+      console.timeEnd("Prime Select");
     });
 
     return {
+      value1,
       data,
     };
   },

@@ -1,24 +1,24 @@
 <template>
   <div>
+    <p>Prime Table</p>
     <render-time />
-    <a-table
-      :columns="supportTableColumns"
-      :data-source="rows"
-      :pagination="paginationTable"
-    >
-      <template #name="{ text }">
-        <a>{{ text }}</a>
-      </template>
-    </a-table>
+    <PTable :value="rows">
+      <PColumn
+        v-for="col of supportTableColumns"
+        :field="col.key"
+        :header="col.title"
+        :key="col.key"
+      ></PColumn>
+    </PTable>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted } from "vue";
-import data from "../data1.json";
+import data from "../data2.json";
 
 export default defineComponent({
-  name: "AntTable",
+  name: "PrimeTable",
   setup() {
     const supportTableColumns = [
       {
@@ -48,13 +48,14 @@ export default defineComponent({
         slots: { customRender: "tags" },
       },
     ];
+
     const rows = data as unknown;
 
     const paginationTable = false;
 
-    console.time("Ant Table");
+    console.time("Time Prime Table");
     onMounted(() => {
-      console.timeEnd("Ant Table");
+      console.timeEnd("Time Prime Table");
     });
 
     return {

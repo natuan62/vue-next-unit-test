@@ -21,19 +21,17 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
-import RenderTime from "@/components/RenderTime.vue";
+
 
 export default defineComponent({
   name: "AntSelect",
-   components: {
-    "render-time": RenderTime,
-  },
+   
 setup() {
     const value1 = ref<string>("lucy");
 
     const data = ref<unknown[]>([]);
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 200; i++) {
       data.value.push({
         key: `${i + 1}`,
         name: "Joe Black",

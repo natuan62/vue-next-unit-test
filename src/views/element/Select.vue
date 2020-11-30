@@ -1,24 +1,30 @@
 <template>
   <div>
-     <render-time />
+    <p>Element Select</p>
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <a-card title="Default size card" style="width: 300px">
-        <p v-for="item2 in item.tags" :key="item2.id">{{ item2 }}</p>
-      </a-card>
+      <el-select v-model="value1" placeholder="Select">
+        <el-option
+          v-for="item in item.tags"
+          :key="item"
+          :label="item"
+          :value="item"
+        >
+        </el-option>
+      </el-select>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import { onMounted } from "vue";
-
+import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: "AntCard",
-   
-setup() {
+  name: "ElementSelect",
+  setup() {
+    const value1 = ref<string>("lucy");
+
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {
@@ -31,18 +37,18 @@ setup() {
       });
     }
 
-    console.time("Ant Card");
+    console.time("Element Select");
+
     onMounted(() => {
-      console.timeEnd("Ant Card");
+      console.timeEnd("Element Select");
     });
 
     return {
+      value1,
       data,
     };
   },
 });
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

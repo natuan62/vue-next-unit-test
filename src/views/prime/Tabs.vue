@@ -1,11 +1,20 @@
 <template>
   <div>
-     <render-time />
+    <p>Prime Tabs</p>
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <a-card title="Default size card" style="width: 300px">
-        <p v-for="item2 in item.tags" :key="item2.id">{{ item2 }}</p>
-      </a-card>
+      <PTabView>
+        <PTabPanel header="Header I">
+          Content I
+        </PTabPanel>
+        <PTabPanel header="Header II">
+          Content II
+        </PTabPanel>
+        <PTabPanel header="Header III">
+          Content III
+        </PTabPanel>
+      </PTabView>
     </div>
   </div>
 </template>
@@ -14,26 +23,21 @@
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
 
-
 export default defineComponent({
-  name: "AntCard",
-   
-setup() {
+  name: "PrimeTabs",
+  setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {
       data.value.push({
         key: `${i + 1}`,
-        name: "Joe Black",
-        age: 32,
-        address: "Sidney No. 1 Lake Park",
-        tags: ["cool", "teacher"],
+        tabs: ["tab 1", "tab 2", "tab 3"],
       });
     }
 
-    console.time("Ant Card");
+    console.time("Prime Tabs");
     onMounted(() => {
-      console.timeEnd("Ant Card");
+      console.timeEnd("Prime Tabs");
     });
 
     return {
@@ -43,6 +47,4 @@ setup() {
 });
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

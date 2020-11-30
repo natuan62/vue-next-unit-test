@@ -1,25 +1,24 @@
 <template>
   <div>
+    <p>Element RowCol</p>
     <render-time />
-    <a-row v-for="(item, index) in data" :key="item.id">
-      <a-col :span="3">
+    <el-row v-for="(item, index) in data" :key="item.id">
+      <el-col :span="3">
         <p>Index {{ index }}</p>
-      </a-col>
-      <a-col :span="3" v-for="item2 in item.tags" :key="item2.id"
-        >... {{ item2 }} ....</a-col
+      </el-col>
+      <el-col :span="3" v-for="item2 in item.tags" :key="item2.id"
+        >... {{ item2 }} ....</el-col
       >
-    </a-row>
+    </el-row>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
 
-
 export default defineComponent({
-  name: "AntRowCol",
-   
-setup() {
+  name: "ElementRowCol",
+  setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {
@@ -32,10 +31,10 @@ setup() {
       });
     }
 
-    console.time("Ant RowCol");
+    console.time("Element RowCol");
 
     onMounted(() => {
-      console.timeEnd("Ant RowCol");
+      console.timeEnd("Element RowCol");
     });
 
     return {
