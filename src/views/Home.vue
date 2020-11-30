@@ -188,79 +188,79 @@ const AntRowCol = defineAsyncComponent(() => import("@/views/ant/RowCol.vue"));
 const AntCard = defineAsyncComponent(() => import("@/views/ant/Card.vue"));
 const AntTabs = defineAsyncComponent(() => import("@/views/ant/Tabs.vue"));
 const HtmlTable = defineAsyncComponent(() => import("@/views/html/Table.vue"));
-const HtmlSelect = defineAsyncComponent(() =>
-  import("@/views/html/Select.vue")
+const HtmlSelect = defineAsyncComponent(
+  () => import("@/views/html/Select.vue")
 );
 const HtmlInput = defineAsyncComponent(() => import("@/views/html/Input.vue"));
-const HtmlRowCol = defineAsyncComponent(() =>
-  import("@/views/html/RowCol.vue")
+const HtmlRowCol = defineAsyncComponent(
+  () => import("@/views/html/RowCol.vue")
 );
 const HtmlCard = defineAsyncComponent(() => import("@/views/html/Card.vue"));
 const HtmlTabs = defineAsyncComponent(() => import("@/views/html/Tabs.vue"));
-const QuasarTable = defineAsyncComponent(() =>
-  import("@/views/quasar/Table.vue")
+const QuasarTable = defineAsyncComponent(
+  () => import("@/views/quasar/Table.vue")
 );
-const QuasarSelect = defineAsyncComponent(() =>
-  import("@/views/quasar/Select.vue")
+const QuasarSelect = defineAsyncComponent(
+  () => import("@/views/quasar/Select.vue")
 );
-const QuasarInput = defineAsyncComponent(() =>
-  import("@/views/quasar/Input.vue")
+const QuasarInput = defineAsyncComponent(
+  () => import("@/views/quasar/Input.vue")
 );
-const QuasarRowCol = defineAsyncComponent(() =>
-  import("@/views/quasar/RowCol.vue")
+const QuasarRowCol = defineAsyncComponent(
+  () => import("@/views/quasar/RowCol.vue")
 );
-const QuasarCard = defineAsyncComponent(() =>
-  import("@/views/quasar/Card.vue")
+const QuasarCard = defineAsyncComponent(
+  () => import("@/views/quasar/Card.vue")
 );
-const QuasarTabs = defineAsyncComponent(() =>
-  import("@/views/quasar/Tabs.vue")
+const QuasarTabs = defineAsyncComponent(
+  () => import("@/views/quasar/Tabs.vue")
 );
 
-const HtmlButton = defineAsyncComponent(() =>
-  import("@/views/html/Button.vue")
+const HtmlButton = defineAsyncComponent(
+  () => import("@/views/html/Button.vue")
 );
 const AntButton = defineAsyncComponent(() => import("@/views/ant/Button.vue"));
-const QuasarButton = defineAsyncComponent(() =>
-  import("@/views/quasar/Button.vue")
+const QuasarButton = defineAsyncComponent(
+  () => import("@/views/quasar/Button.vue")
 );
 
 const PrimeTable = defineAsyncComponent(() => import("./prime/Table.vue"));
 
-const PrimeSelect = defineAsyncComponent(() =>
-  import("@/views/prime/Select.vue")
+const PrimeSelect = defineAsyncComponent(
+  () => import("@/views/prime/Select.vue")
 );
-const PrimeInput = defineAsyncComponent(() =>
-  import("@/views/prime/Input.vue")
+const PrimeInput = defineAsyncComponent(
+  () => import("@/views/prime/Input.vue")
 );
-const PrimeRowCol = defineAsyncComponent(() =>
-  import("@/views/prime/RowCol.vue")
+const PrimeRowCol = defineAsyncComponent(
+  () => import("@/views/prime/RowCol.vue")
 );
-const PrimeButton = defineAsyncComponent(() =>
-  import("@/views/prime/Button.vue")
+const PrimeButton = defineAsyncComponent(
+  () => import("@/views/prime/Button.vue")
 );
 const PrimeCard = defineAsyncComponent(() => import("@/views/prime/Card.vue"));
 const PrimeTabs = defineAsyncComponent(() => import("@/views/prime/Tabs.vue"));
 
-const ElementTable = defineAsyncComponent(() =>
-  import("@/views/element/Table.vue")
+const ElementTable = defineAsyncComponent(
+  () => import("@/views/element/Table.vue")
 );
-const ElementSelect = defineAsyncComponent(() =>
-  import("@/views/element/Select.vue")
+const ElementSelect = defineAsyncComponent(
+  () => import("@/views/element/Select.vue")
 );
-const ElementInput = defineAsyncComponent(() =>
-  import("@/views/element/Input.vue")
+const ElementInput = defineAsyncComponent(
+  () => import("@/views/element/Input.vue")
 );
-const ElementRowCol = defineAsyncComponent(() =>
-  import("@/views/element/RowCol.vue")
+const ElementRowCol = defineAsyncComponent(
+  () => import("@/views/element/RowCol.vue")
 );
-const ElementButton = defineAsyncComponent(() =>
-  import("@/views/element/Button.vue")
+const ElementButton = defineAsyncComponent(
+  () => import("@/views/element/Button.vue")
 );
-const ElementCard = defineAsyncComponent(() =>
-  import("@/views/element/Card.vue")
+const ElementCard = defineAsyncComponent(
+  () => import("@/views/element/Card.vue")
 );
-const ElementTabs = defineAsyncComponent(() =>
-  import("@/views/element/Tabs.vue")
+const ElementTabs = defineAsyncComponent(
+  () => import("@/views/element/Tabs.vue")
 );
 
 export default defineComponent({

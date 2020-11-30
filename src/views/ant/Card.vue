@@ -1,6 +1,6 @@
 <template>
   <div>
-     <render-time />
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <a-card title="Default size card" style="width: 300px">
@@ -14,11 +14,10 @@
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
 
-
 export default defineComponent({
   name: "AntCard",
-   
-setup() {
+
+  setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {
@@ -43,6 +42,4 @@ setup() {
 });
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

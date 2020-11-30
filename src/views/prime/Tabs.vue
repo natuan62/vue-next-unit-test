@@ -5,15 +5,9 @@
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <PTabView>
-        <PTabPanel header="Header I">
-          Content I
-        </PTabPanel>
-        <PTabPanel header="Header II">
-          Content II
-        </PTabPanel>
-        <PTabPanel header="Header III">
-          Content III
-        </PTabPanel>
+        <PTabPanel header="Header I"> Content I </PTabPanel>
+        <PTabPanel header="Header II"> Content II </PTabPanel>
+        <PTabPanel header="Header III"> Content III </PTabPanel>
       </PTabView>
     </div>
   </div>

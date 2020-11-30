@@ -1,6 +1,6 @@
 <template>
   <div>
-     <render-time />
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <button
@@ -22,8 +22,8 @@ import { onMounted } from "vue";
 
 export default defineComponent({
   name: "HtmlTabs",
-   
-setup() {
+
+  setup() {
     const data = ref<unknown[]>([]);
     const tabContent = ref<string | undefined>(undefined);
 
@@ -55,7 +55,7 @@ setup() {
 
 <style scoped>
 .btn {
-  background-color: none; 
+  background-color: none;
   border: none;
   color: blue;
   padding: 12px 24px;

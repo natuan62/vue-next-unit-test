@@ -187,7 +187,6 @@ const routes: Array<RouteRecordRaw> = [
     name: "elementtabs",
     component: () => import("../views/element/Tabs.vue"),
   },
-
 ];
 
 const router = createRouter({

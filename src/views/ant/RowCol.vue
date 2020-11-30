@@ -15,11 +15,10 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
 
-
 export default defineComponent({
   name: "AntRowCol",
-   
-setup() {
+
+  setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {

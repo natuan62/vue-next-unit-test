@@ -30,8 +30,8 @@ import "primeflex/primeflex.css";
 import "primevue/resources/themes/saga-blue/theme.css";
 
 // element-plus
-import ElementPlus from 'element-plus';
-import 'element-plus/lib/theme-chalk/index.css';
+import ElementPlus from "element-plus";
+import "element-plus/lib/theme-chalk/index.css";
 
 import PButton from "primevue/button";
 import PTable from "primevue/datatable";

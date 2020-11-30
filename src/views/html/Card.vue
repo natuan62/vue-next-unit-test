@@ -16,11 +16,10 @@
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
 
-
 export default defineComponent({
   name: "HtmlCard",
-   
-setup() {
+
+  setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {

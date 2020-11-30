@@ -17,10 +17,9 @@
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
 
-
 export default defineComponent({
   name: "AntTabs",
-  
+
   setup() {
     const data = ref<unknown[]>([]);
 
@@ -43,5 +42,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

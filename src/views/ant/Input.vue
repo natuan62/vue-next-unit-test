@@ -1,6 +1,6 @@
 <template>
   <div>
-     <render-time />
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <input :value="item.name" placeholder="Basic usage" />
@@ -12,11 +12,10 @@
 import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
 
-
 export default defineComponent({
   name: "AntInput",
-   
-setup() {
+
+  setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {
@@ -41,5 +40,4 @@ setup() {
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

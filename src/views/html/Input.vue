@@ -1,6 +1,6 @@
 <template>
   <div>
-     <render-time />
+    <render-time />
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
       <input :value="item.name" placeholder="Basic usage" />
@@ -11,11 +11,10 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
 
-
 export default defineComponent({
   name: "HtmlInput",
-   
-setup() {
+
+  setup() {
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 200; i++) {
@@ -40,5 +39,4 @@ setup() {
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

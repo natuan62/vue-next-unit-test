@@ -22,10 +22,9 @@
 import { defineComponent } from "vue";
 import data from "../data.json";
 
-
 export default defineComponent({
   name: "HtmlTable",
-  
+
   setup() {
     const supportTableColumns = [
       {
@@ -81,5 +80,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

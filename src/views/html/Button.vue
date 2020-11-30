@@ -12,13 +12,8 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
-// 
-
 export default defineComponent({
   name: "HtmlButton",
-  components: {
-    // "render-time": RenderTime,
-  },
   setup() {
     const data = ref<unknown[]>([]);
 
@@ -41,5 +36,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
