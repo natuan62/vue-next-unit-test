@@ -2,6 +2,8 @@
   <div class="home">
     <p>Click each button to display the corresponding component.</p>
     <button
+      class="btn"
+      :class="{'btn-clicked': clickedButton === type.link}"
       v-for="(type, index) in types"
       :key="type.id"
       @click="renderByName(type.link)"
@@ -340,8 +342,17 @@ export default defineComponent({
 </script>
 
 <style scoped>
-button {
+.btn {
   margin-right: 5px;
+  padding: 5px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-clicked {
+  background: #4CAF50;
+  color: white;
 }
 
 .column {
