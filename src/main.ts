@@ -6,6 +6,7 @@ import Antd from "ant-design-vue";
 // quasar
 import "quasar/dist/quasar.css";
 import "ant-design-vue/dist/antd.css";
+import iconSet from 'quasar/icon-set/mdi-v4.js';
 import {
   Quasar,
   QBtn,
@@ -60,6 +61,7 @@ app.use(Antd);
 app.use(Quasar, {
   config: {},
   components: { QBtn, QInput, QCheckbox, QTabs, QSelect, QCard, QTab, QTable },
+  iconSet,
 });
 
 // prime
