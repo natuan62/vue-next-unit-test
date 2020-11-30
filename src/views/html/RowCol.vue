@@ -2,7 +2,9 @@
   <div>
     <p>Html RowCol</p>
     <div class="row" v-for="(item, index) in data" :key="item.id">
-      <p>Index {{ index }}</p>
+      <div class="column">
+        <p>Index {{ index }}</p>
+      </div>
       <div class="column" v-for="item2 in item.tags" :key="item2.id">
         ... {{ item2 }} ....
       </div>
@@ -24,7 +26,7 @@ export default defineComponent({
         name: "Joe Black",
         age: 32,
         address: "Sidney No. 1 Lake Park",
-        tags: ["cool", "teacher", "cool", "teacher", "cool"],
+        tags: ["cool", "teacher", "cool", "lose"],
       });
     }
 
@@ -44,7 +46,7 @@ export default defineComponent({
 <style scoped>
 .column {
   float: left;
-  width: 25%;
+  width: 20%;
 }
 
 .row:after {
