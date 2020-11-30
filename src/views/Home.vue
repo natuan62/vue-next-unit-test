@@ -3,7 +3,7 @@
     <p>Click each button to display the corresponding component.</p>
     <button
       class="btn"
-      :class="{'btn-clicked': clickedButton === type.link}"
+      :class="{ 'btn-clicked': clickedButton === type.link }"
       v-for="(type, index) in types"
       :key="type.id"
       @click="renderByName(type.link)"
@@ -178,17 +178,74 @@
         <element-tabs />
       </div>
     </div>
+
+    <div class="row" v-if="clickedButton === 'slider'">
+      <!-- <div class="column">
+        <p><b>HTML</b></p>
+        <slider typeLib="html" />
+      </div>
+      <div class="column">
+        <p><b>Ant design</b></p>
+        <slider typeLib="ant" />
+      </div>
+      <div class="column">
+        <p><b>Quasar Framework</b></p>
+        <slider typeLib="quasar" />
+      </div>
+      <div class="column">
+        <p><b>PrimeVue Framework</b></p>
+        <slider typeLib="prime" />
+      </div>
+      <div class="column">
+        <p><b>Element-plus Framework</b></p>
+        <slider typeLib="element" />
+      </div> -->
+      <div class="column">
+        <p><b>HTML</b></p>
+        <html-slider />
+      </div>
+      <div class="column">
+        <p><b>Ant design</b></p>
+        <ant-slider />
+      </div>
+      <div class="column">
+        <p><b>Quasar Framework</b></p>
+        <p>Quasar tabs</p>
+        <quasar-slider />
+      </div>
+      <div class="column">
+        <p><b>PrimeVue Framework</b></p>
+        <prime-slider />
+      </div>
+      <div class="column">
+        <p><b>Element-plus Framework</b></p>
+        <element-slider />
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineAsyncComponent, defineComponent, ref } from "vue";
+const AntSlider = defineAsyncComponent(() => import("@/views/ant/Slider.vue"));
+const HtmlSlider = defineAsyncComponent(
+  () => import("@/views/html/Slider.vue")
+);
+const QuasarSlider = defineAsyncComponent(
+  () => import("@/views/quasar/Slider.vue")
+);
+const ElementSlider = defineAsyncComponent(
+  () => import("@/views/element/Slider.vue")
+);
+const PrimeSlider = defineAsyncComponent(() => import("./prime/Slider.vue"));
+
 const AntTable = defineAsyncComponent(() => import("@/views/ant/Table.vue"));
 const AntSelect = defineAsyncComponent(() => import("@/views/ant/Select.vue"));
 const AntInput = defineAsyncComponent(() => import("@/views/ant/Input.vue"));
 const AntRowCol = defineAsyncComponent(() => import("@/views/ant/RowCol.vue"));
 const AntCard = defineAsyncComponent(() => import("@/views/ant/Card.vue"));
 const AntTabs = defineAsyncComponent(() => import("@/views/ant/Tabs.vue"));
+
 const HtmlTable = defineAsyncComponent(() => import("@/views/html/Table.vue"));
 const HtmlSelect = defineAsyncComponent(
   () => import("@/views/html/Select.vue")
@@ -265,6 +322,8 @@ const ElementTabs = defineAsyncComponent(
   () => import("@/views/element/Tabs.vue")
 );
 
+const Slider = defineAsyncComponent(() => import("@/views/Slider.vue"));
+
 export default defineComponent({
   name: "Home",
   components: {
@@ -307,6 +366,14 @@ export default defineComponent({
     "prime-button": PrimeButton,
     "prime-card": PrimeCard,
     "prime-tabs": PrimeTabs,
+
+    "ant-slider": AntSlider,
+    "html-slider": HtmlSlider,
+    "quasar-slider": QuasarSlider,
+    "element-slider": ElementSlider,
+    "prime-slider": PrimeSlider,
+
+    slider: Slider,
   },
   setup() {
     // const routes: unknown[] = [
@@ -323,6 +390,7 @@ export default defineComponent({
       { link: "button", name: "Button" },
       { link: "card", name: "Card" },
       { link: "tabs", name: "Tabs" },
+      { link: "slider", name: "Slider" },
     ];
 
     const clickedButton = ref<string | undefined>(undefined);
@@ -351,7 +419,7 @@ export default defineComponent({
 }
 
 .btn-clicked {
-  background: #4CAF50;
+  background: #4caf50;
   color: white;
 }
 

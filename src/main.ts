@@ -6,7 +6,7 @@ import Antd from "ant-design-vue";
 // quasar
 import "quasar/dist/quasar.css";
 import "ant-design-vue/dist/antd.css";
-import iconSet from 'quasar/icon-set/mdi-v4.js';
+import iconSet from "quasar/icon-set/mdi-v4.js";
 import {
   Quasar,
   QBtn,
@@ -17,6 +17,7 @@ import {
   QTab,
   QCard,
   QTable,
+  QSlider,
 } from "quasar";
 
 // equal
@@ -26,14 +27,8 @@ import {
 // primeVue
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
-
 import "primeflex/primeflex.css";
 import "primevue/resources/themes/saga-blue/theme.css";
-
-// element-plus
-import ElementPlus from "element-plus";
-import "element-plus/lib/theme-chalk/index.css";
-
 import PButton from "primevue/button";
 import PTable from "primevue/datatable";
 import PColumn from "primevue/column";
@@ -42,6 +37,11 @@ import PInputText from "primevue/inputtext";
 import PCard from "primevue/card";
 import PTabView from "primevue/tabview";
 import PTabPanel from "primevue/tabpanel";
+import PSlider from "primevue/slider";
+
+// element-plus
+import ElementPlus from "element-plus";
+import "element-plus/lib/theme-chalk/index.css";
 
 import RenderTime from "@/components/RenderTime.vue";
 
@@ -60,7 +60,17 @@ app.use(Antd);
 // quasar
 app.use(Quasar, {
   config: {},
-  components: { QBtn, QInput, QCheckbox, QTabs, QSelect, QCard, QTab, QTable },
+  components: {
+    QBtn,
+    QInput,
+    QCheckbox,
+    QTabs,
+    QSelect,
+    QCard,
+    QTab,
+    QTable,
+    QSlider,
+  },
   iconSet,
 });
 
@@ -73,6 +83,7 @@ app.component("PInputText", PInputText);
 app.component("PCard", PCard);
 app.component("PTabView", PTabView);
 app.component("PTabPanel", PTabPanel);
+app.component("PSlider", PSlider);
 
 app.component("render-time", RenderTime);
 
