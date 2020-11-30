@@ -222,11 +222,48 @@
         <element-slider />
       </div>
     </div>
+
+     <div class="row" v-if="clickedButton === 'switch'">
+      <div class="column">
+        <p><b>HTML</b></p>
+        <html-switch />
+      </div>
+      <div class="column">
+        <p><b>Ant design</b></p>
+        <ant-switch />
+      </div>
+      <div class="column">
+        <p><b>Quasar Framework</b></p>
+        <p>Quasar switch</p>
+        <quasar-switch />
+      </div>
+      <div class="column">
+        <p><b>PrimeVue Framework</b></p>
+        <prime-switch />
+      </div>
+      <div class="column">
+        <p><b>Element-plus Framework</b></p>
+        <element-switch />
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script lang="ts">
 import { defineAsyncComponent, defineComponent, ref } from "vue";
+const AntSwitch = defineAsyncComponent(() => import("@/views/ant/Switch.vue"));
+const HtmlSwitch = defineAsyncComponent(
+  () => import("@/views/html/Switch.vue")
+);
+const QuasarSwitch = defineAsyncComponent(
+  () => import("@/views/quasar/Switch.vue")
+);
+const ElementSwitch = defineAsyncComponent(
+  () => import("@/views/element/Switch.vue")
+);
+const PrimeSwitch = defineAsyncComponent(() => import("./prime/Switch.vue"));
+
 const AntSlider = defineAsyncComponent(() => import("@/views/ant/Slider.vue"));
 const HtmlSlider = defineAsyncComponent(
   () => import("@/views/html/Slider.vue")
@@ -372,6 +409,12 @@ export default defineComponent({
     "quasar-slider": QuasarSlider,
     "element-slider": ElementSlider,
     "prime-slider": PrimeSlider,
+    
+    "ant-switch": AntSwitch,
+    "html-switch": HtmlSwitch,
+    "quasar-switch": QuasarSwitch,
+    "element-switch": ElementSwitch,
+    "prime-switch": PrimeSwitch,
 
     slider: Slider,
   },
@@ -391,6 +434,7 @@ export default defineComponent({
       { link: "card", name: "Card" },
       { link: "tabs", name: "Tabs" },
       { link: "slider", name: "Slider" },
+      { link: "switch", name: "Switch" },
     ];
 
     const clickedButton = ref<string | undefined>(undefined);

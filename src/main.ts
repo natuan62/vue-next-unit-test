@@ -38,6 +38,7 @@ import PCard from "primevue/card";
 import PTabView from "primevue/tabview";
 import PTabPanel from "primevue/tabpanel";
 import PSlider from "primevue/slider";
+import PInputSwitch from 'primevue/inputswitch';
 
 // element-plus
 import ElementPlus from "element-plus";
@@ -84,6 +85,7 @@ app.component("PCard", PCard);
 app.component("PTabView", PTabView);
 app.component("PTabPanel", PTabPanel);
 app.component("PSlider", PSlider);
+app.component("PInputSwitch", PInputSwitch);
 
 app.component("render-time", RenderTime);
 
