@@ -1,9 +1,12 @@
 <template>
   <div>
-    <p>Html Button</p>
+    <p>Element Button</p>
+
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <button v-for="(item2) in item.tags" :key="item2.id">... {{item2}} ...</button>
+      <el-button v-for="item2 in item.tags" :key="item2.id" type="primary">{{
+        item2
+      }}</el-button>
     </div>
   </div>
 </template>
@@ -12,7 +15,7 @@
 import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: "HtmlButton",
+  name: "ElementButton",
   setup() {
     const data = ref<unknown[]>([]);
 
@@ -26,9 +29,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Html Button");
+    console.time("Element Button");
     onMounted(() => {
-      console.timeEnd("Html Button");
+      console.timeEnd("Element Button");
     });
 
     return {
@@ -38,5 +41,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

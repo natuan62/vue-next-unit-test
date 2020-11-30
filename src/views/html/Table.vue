@@ -56,7 +56,7 @@ export default defineComponent({
 
     // const rows = ref<any[]>([]);
 
-    // for (let i = 0; i < 10000; i++) {
+    // for (let i = 0; i < 30000; i++) {
     //   rows.value.push({
     //     key: `${i + 1}`,
     //     name: 'Joe Black',

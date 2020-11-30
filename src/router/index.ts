@@ -151,6 +151,43 @@ const routes: Array<RouteRecordRaw> = [
     name: "Quasartabs",
     component: () => import("../views/quasar/Tabs.vue"),
   },
+  // element-plus
+  {
+    path: "/element-table",
+    name: "elementTable",
+    component: () => import("../views/element/Table.vue"),
+  },
+  {
+    path: "/element-select",
+    name: "elementselect",
+    component: () => import("../views/element/Select.vue"),
+  },
+  {
+    path: "/element-input",
+    name: "elementinput",
+    component: () => import("../views/element/Input.vue"),
+  },
+  {
+    path: "/element-rowcol",
+    name: "elementrowcol",
+    component: () => import("../views/element/RowCol.vue"),
+  },
+  {
+    path: "/element-button",
+    name: "elementButton",
+    component: () => import("../views/element/Button.vue"),
+  },
+  {
+    path: "/element-card",
+    name: "elementcard",
+    component: () => import("../views/element/Card.vue"),
+  },
+  {
+    path: "/element-tabs",
+    name: "elementtabs",
+    component: () => import("../views/element/Tabs.vue"),
+  },
+
 ];
 
 const router = createRouter({

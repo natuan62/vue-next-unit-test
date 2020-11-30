@@ -2,8 +2,10 @@
   <div>
     <p>Quasar RowCol</p>
     <div class="row" v-for="(item, index) in data" :key="item.id">
-      <p>Index {{ index }}</p>
-      <div class="col" v-for="item2 in item.tags" :key="item2.id">
+      <div class="col-2">
+        <p>Index {{ index }}</p>
+      </div>
+      <div class="col-2" v-for="item2 in item.tags" :key="item2.id">
         ... {{ item2 }} ....
       </div>
     </div>
@@ -20,7 +22,7 @@ export default defineComponent({
 
     const data = ref<unknown[]>([]);
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 300; i++) {
       data.value.push({
         key: `${i + 1}`,
         name: "Joe Black",

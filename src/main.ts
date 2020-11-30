@@ -29,6 +29,10 @@ import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 import "primevue/resources/themes/saga-blue/theme.css";
 
+// element-plus
+import ElementPlus from 'element-plus';
+import 'element-plus/lib/theme-chalk/index.css';
+
 import PButton from "primevue/button";
 import PTable from "primevue/datatable";
 import PColumn from "primevue/column";
@@ -65,5 +69,8 @@ app.component("PInputText", PInputText);
 app.component("PCard", PCard);
 app.component("PTabView", PTabView);
 app.component("PTabPanel", PTabPanel);
+
+// element-plus
+app.use(ElementPlus);
 
 app.mount("#app");

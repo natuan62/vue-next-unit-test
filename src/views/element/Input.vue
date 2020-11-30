@@ -1,18 +1,19 @@
 <template>
   <div>
-    <p>Html Button</p>
+    <p>Element Input</p>
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <button v-for="(item2) in item.tags" :key="item2.id">... {{item2}} ...</button>
+      <el-input placeholder="Please input" v-model="item.name" style="width: 200px"></el-input>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "vue";
+import { defineComponent, ref } from "vue";
+import { onMounted } from "vue";
 
 export default defineComponent({
-  name: "HtmlButton",
+  name: "ElementInput",
   setup() {
     const data = ref<unknown[]>([]);
 
@@ -22,13 +23,13 @@ export default defineComponent({
         name: "Joe Black",
         age: 32,
         address: "Sidney No. 1 Lake Park",
-        tags: ["cool", "teacher", "feel", "lose"],
+        tags: ["cool", "teacher"],
       });
     }
 
-    console.time("Html Button");
+    console.time("Element Input");
     onMounted(() => {
-      console.timeEnd("Html Button");
+      console.timeEnd("Element Input");
     });
 
     return {
@@ -38,5 +39,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

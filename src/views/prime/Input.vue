@@ -18,7 +18,7 @@ export default defineComponent({
   setup() {
     const data = ref<unknown[]>([]);
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 300; i++) {
       data.value.push({
         key: `${i + 1}`,
         name: "Joe Black",

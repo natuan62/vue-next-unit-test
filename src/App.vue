@@ -22,6 +22,7 @@ export default defineComponent({
       { link: "html", name: "HTML" },
       { link: "ant", name: "Ant Design" },
       { link: "prime", name: "Prime" },
+      { link: "element", name: "Element Plus" },
       { link: "quasar", name: "Quasar" },
     ];
 

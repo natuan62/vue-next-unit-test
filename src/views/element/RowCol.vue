@@ -1,15 +1,14 @@
 <template>
   <div>
-    <p>Prime RowCol</p>
-
-    <div class="p-grid p-ml-2" v-for="(item, index) in data" :key="item.id">
-      <div class="p-col">
+    <p>Element RowCol</p>
+    <el-row v-for="(item, index) in data" :key="item.id">
+      <el-col :span="3">
         <p>Index {{ index }}</p>
-      </div>
-      <div class="p-col" v-for="(item2, index) in item.tags" :key="item2.id">
-        ...{{ index }} {{ item2 }}...
-      </div>
-    </div>
+      </el-col>
+      <el-col :span="3" v-for="item2 in item.tags" :key="item2.id"
+        >... {{ item2 }} ....</el-col
+      >
+    </el-row>
   </div>
 </template>
 
@@ -17,7 +16,7 @@
 import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: "PrimeRowCol",
+  name: "ElementRowCol",
   setup() {
     const data = ref<unknown[]>([]);
 
@@ -31,10 +30,10 @@ export default defineComponent({
       });
     }
 
-    console.time("Prime RowCol");
+    console.time("Element RowCol");
 
     onMounted(() => {
-      console.timeEnd("Prime RowCol");
+      console.timeEnd("Element RowCol");
     });
 
     return {
@@ -44,4 +43,4 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style scoped></style>

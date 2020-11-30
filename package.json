@@ -11,6 +11,7 @@
   "dependencies": {
     "ant-design-vue": "^2.0.0-rc.2",
     "core-js": "^3.6.5",
+    "element-plus": "^1.0.1-beta.0",
     "equal-vue": "^0.7.19",
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",
