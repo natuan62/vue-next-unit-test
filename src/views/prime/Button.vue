@@ -1,11 +1,9 @@
 <template>
   <div>
-    <p>Ant Button</p>
+    <p>Equal Button</p>
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <a-button v-for="item2 in item.tags" :key="item2.id"
-        >... {{ item2 }} ...</a-button
-      >
+       <PButton class="p-mx-1" v-for="(item2) in item.tags" :key="item2.id" :label="item2"/>
     </div>
   </div>
 </template>
@@ -14,7 +12,7 @@
 import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: "AntButton",
+  name: "PrimeButton",
   setup() {
     const data = ref<unknown[]>([]);
 
@@ -28,9 +26,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Ant Button");
+    console.time("Prime Button");
     onMounted(() => {
-      console.timeEnd("Ant Button");
+      console.timeEnd("Prime Button");
     });
 
     return {
@@ -40,4 +38,5 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

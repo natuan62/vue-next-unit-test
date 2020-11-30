@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
-    <p v-for="item in routes" :key="item.id">
-      {{ item.name }} :
+    <p v-for="(item, index) in routes" :key="item.id">
+      {{ index + 1 }}. {{ item.name }} :
       <span v-for="type in types" :key="type.id">
         <router-link :to="`/${item.link}-${type.link}`">{{
           type.name
@@ -21,6 +21,7 @@ export default defineComponent({
     const routes: unknown[] = [
       { link: "html", name: "HTML" },
       { link: "ant", name: "Ant Design" },
+      { link: "prime", name: "Prime" },
       { link: "quasar", name: "Quasar" },
     ];
 

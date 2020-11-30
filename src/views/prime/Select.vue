@@ -1,11 +1,14 @@
 <template>
   <div>
-    <p>Ant Button</p>
+    <p>Prime Select</p>
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <a-button v-for="item2 in item.tags" :key="item2.id"
-        >... {{ item2 }} ...</a-button
-      >
+      <PDropdown
+        v-model="value1"
+        :options="item.tags"
+        optionLabel="name"
+        placeholder="Select"
+      />
     </div>
   </div>
 </template>
@@ -14,8 +17,10 @@
 import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: "AntButton",
+  name: "PrimeSelect",
   setup() {
+    const value1 = ref<string>("lucy");
+
     const data = ref<unknown[]>([]);
 
     for (let i = 0; i < 100; i++) {
@@ -24,16 +29,26 @@ export default defineComponent({
         name: "Joe Black",
         age: 32,
         address: "Sidney No. 1 Lake Park",
-        tags: ["cool", "teacher", "feel", "lose"],
+        tags: [
+          {
+            name: "cool",
+            code: "cool",
+          },
+          {
+            name: "teacher",
+            code: "teacher",
+          },
+        ],
       });
     }
 
-    console.time("Ant Button");
+    console.time("Prime Select");
     onMounted(() => {
-      console.timeEnd("Ant Button");
+      console.timeEnd("Prime Select");
     });
 
     return {
+      value1,
       data,
     };
   },

@@ -1,11 +1,12 @@
 <template>
   <div>
-    <p>Ant Button</p>
-    <div v-for="(item, index) in data" :key="item.id">
+    <p>Prime RowCol</p>
+
+    <div class="p-grid p-ml-2" v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <a-button v-for="item2 in item.tags" :key="item2.id"
-        >... {{ item2 }} ...</a-button
-      >
+      <div class="p-col" v-for="(item2, index) in item.tags" :key="item2.id">
+        ...{{index}} {{ item2 }}...
+      </div>
     </div>
   </div>
 </template>
@@ -14,7 +15,7 @@
 import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: "AntButton",
+  name: "PrimeRowCol",
   setup() {
     const data = ref<unknown[]>([]);
 
@@ -24,13 +25,14 @@ export default defineComponent({
         name: "Joe Black",
         age: 32,
         address: "Sidney No. 1 Lake Park",
-        tags: ["cool", "teacher", "feel", "lose"],
+        tags: ["cool", "teacher", "cool", "teacher", "cool"],
       });
     }
 
-    console.time("Ant Button");
+    console.time("Prime RowCol");
+
     onMounted(() => {
-      console.timeEnd("Ant Button");
+      console.timeEnd("Prime RowCol");
     });
 
     return {
@@ -40,4 +42,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style></style>

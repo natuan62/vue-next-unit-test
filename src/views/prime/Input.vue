@@ -1,12 +1,10 @@
 <template>
-  <div class="wrapper">
-    <p>Html Card</p>
+  <div>
+    <p>Prime Input</p>
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <div class="card">
-        <h5>Default size card</h5>
-        <p v-for="item2 in item.tags" :key="item2.id">{{ item2 }}</p>
-      </div>
+      <!-- <input :value="item.name" placeholder="Basic usage" /> -->
+      <PInputText type="text" v-model="item.name" placeholder="Prime Vue input" />
     </div>
   </div>
 </template>
@@ -16,11 +14,11 @@ import { defineComponent, ref } from "vue";
 import { onMounted } from "vue";
 
 export default defineComponent({
-  name: "HtmlCard",
+  name: "PrimeInput",
   setup() {
     const data = ref<unknown[]>([]);
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 100; i++) {
       data.value.push({
         key: `${i + 1}`,
         name: "Joe Black",
@@ -30,9 +28,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Html Card");
+    console.time("Prime Input");
     onMounted(() => {
-      console.timeEnd("Html Card");
+      console.timeEnd("Prime Input");
     });
 
     return {
@@ -43,12 +41,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.wrapper {
-  margin-left: 15px;
-}
-
-.card {
-  border: 1px solid;
-  width: 200px;
-}
 </style>

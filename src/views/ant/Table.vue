@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from "vue";
-import data from "../data.json";
+import data from "../data1.json";
 
 export default defineComponent({
   name: "AntTable",

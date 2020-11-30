@@ -3,10 +3,15 @@
     <p>Html Tabs</p>
     <div v-for="(item, index) in data" :key="item.id">
       <p>Index {{ index }}</p>
-      <button v-for="tab in item.tags" :key="tab" @click="selected = tab">
+      <button
+        class="btn"
+        v-for="tab in item.tags"
+        :key="tab"
+        @click="tabContent = tab"
+      >
         {{ tab }}
       </button>
-
+      <p v-if="tabContent">Tab content: {{ tabContent }}</p>
     </div>
   </div>
 </template>
@@ -18,6 +23,7 @@ export default defineComponent({
   name: "HtmlTabs",
   setup() {
     const data = ref<unknown[]>([]);
+    const tabContent = ref<string | undefined>(undefined);
 
     const tabs: string[] = ["Home", "Contact"];
 
@@ -39,10 +45,21 @@ export default defineComponent({
     return {
       data,
       tabs,
+      tabContent,
     };
   },
 });
 </script>
 
 <style scoped>
+.btn {
+  background-color: none; 
+  border: none;
+  color: blue;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
 </style>
