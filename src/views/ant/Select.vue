@@ -40,10 +40,10 @@ export default defineComponent({
       });
     }
 
-    console.time("Ant Select");
+    // console.time("Ant Select");
 
     onMounted(() => {
-      console.timeEnd("Ant Select");
+      // console.timeEnd("Ant Select");
     });
 
     return {

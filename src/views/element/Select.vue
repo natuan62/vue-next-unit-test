@@ -37,10 +37,10 @@ export default defineComponent({
       });
     }
 
-    console.time("Element Select");
+    // console.time("Element Select");
 
     onMounted(() => {
-      console.timeEnd("Element Select");
+      // console.timeEnd("Element Select");
     });
 
     return {

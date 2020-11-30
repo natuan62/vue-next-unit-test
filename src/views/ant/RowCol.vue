@@ -31,10 +31,10 @@ export default defineComponent({
       });
     }
 
-    console.time("Ant RowCol");
+    // console.time("Ant RowCol");
 
     onMounted(() => {
-      console.timeEnd("Ant RowCol");
+      // console.timeEnd("Ant RowCol");
     });
 
     return {

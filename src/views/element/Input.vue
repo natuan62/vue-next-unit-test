@@ -32,9 +32,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Element Input");
+    // console.time("Element Input");
     onMounted(() => {
-      console.timeEnd("Element Input");
+      // console.timeEnd("Element Input");
     });
 
     return {

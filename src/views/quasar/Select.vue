@@ -27,10 +27,10 @@ export default defineComponent({
       });
     }
 
-    console.time("Quasar Select");
+    // console.time("Quasar Select");
 
     onMounted(() => {
-      console.timeEnd("Quasar Select");
+      // console.timeEnd("Quasar Select");
     });
 
     return {

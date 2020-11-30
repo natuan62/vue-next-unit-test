@@ -25,9 +25,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Quasar Button");
+    // console.time("Quasar Button");
     onMounted(() => {
-      console.timeEnd("Quasar Button");
+      // console.timeEnd("Quasar Button");
     });
 
     return {

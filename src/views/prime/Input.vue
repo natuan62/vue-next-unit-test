@@ -33,9 +33,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Prime Input");
+    // console.time("Prime Input");
     onMounted(() => {
-      console.timeEnd("Prime Input");
+      // console.timeEnd("Prime Input");
     });
 
     return {

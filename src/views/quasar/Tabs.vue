@@ -38,9 +38,9 @@ export default defineComponent({
 
     const tab = ref<string>("mails");
 
-    console.time("Quasar Tabs");
+    // console.time("Quasar Tabs");
     onMounted(() => {
-      console.timeEnd("Quasar Tabs");
+      // console.timeEnd("Quasar Tabs");
     });
 
     return {

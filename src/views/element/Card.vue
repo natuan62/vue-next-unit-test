@@ -33,9 +33,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Element Card");
+    // console.time("Element Card");
     onMounted(() => {
-      console.timeEnd("Element Card");
+      // console.timeEnd("Element Card");
     });
 
     return {

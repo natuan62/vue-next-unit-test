@@ -40,9 +40,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Prime Card");
+    // console.time("Prime Card");
     onMounted(() => {
-      console.timeEnd("Prime Card");
+      // console.timeEnd("Prime Card");
     });
 
     return {

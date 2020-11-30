@@ -32,9 +32,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Prime Button");
+    // console.time("Prime Button");
     onMounted(() => {
-      console.timeEnd("Prime Button");
+      // console.timeEnd("Prime Button");
     });
 
     return {

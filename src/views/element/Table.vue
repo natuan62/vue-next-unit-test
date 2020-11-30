@@ -49,9 +49,9 @@ export default defineComponent({
 
     const paginationTable = false;
 
-    console.time("Element Table");
+    // console.time("Element Table");
     onMounted(() => {
-      console.timeEnd("Element Table");
+      // console.timeEnd("Element Table");
     });
 
     return {

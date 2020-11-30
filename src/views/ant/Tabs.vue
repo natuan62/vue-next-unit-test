@@ -30,9 +30,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Ant Tabs");
+    // console.time("Ant Tabs");
     onMounted(() => {
-      console.timeEnd("Ant Tabs");
+      // console.timeEnd("Ant Tabs");
     });
 
     return {

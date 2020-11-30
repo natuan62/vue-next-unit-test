@@ -29,9 +29,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Prime Tabs");
+    // console.time("Prime Tabs");
     onMounted(() => {
-      console.timeEnd("Prime Tabs");
+      // console.timeEnd("Prime Tabs");
     });
 
     return {

@@ -30,9 +30,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Ant Card");
+    // console.time("Ant Card");
     onMounted(() => {
-      console.timeEnd("Ant Card");
+      // console.timeEnd("Ant Card");
     });
 
     return {

@@ -32,9 +32,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Html Card");
+    // console.time("Html Card");
     onMounted(() => {
-      console.timeEnd("Html Card");
+      // console.timeEnd("Html Card");
     });
 
     return {

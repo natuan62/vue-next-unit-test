@@ -29,10 +29,10 @@ export default defineComponent({
       });
     }
 
-    console.time("Html Select");
+    // console.time("Html Select");
 
     onMounted(() => {
-      console.timeEnd("Html Select");
+      // console.timeEnd("Html Select");
     });
 
     return {

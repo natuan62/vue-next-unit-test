@@ -27,9 +27,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Html Input");
+    // console.time("Html Input");
     onMounted(() => {
-      console.timeEnd("Html Input");
+      // console.timeEnd("Html Input");
     });
 
     return {

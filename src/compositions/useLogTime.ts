@@ -11,7 +11,7 @@ const useLogTime = () => {
     end.value = window.performance.now();
 
     time.value = Math.round((end.value - start.value) * 100) / 100;
-    console.log("time.value", time.value);
+    // console.log("time.value", time.value);
   });
 
   return {

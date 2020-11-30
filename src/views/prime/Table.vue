@@ -53,9 +53,9 @@ export default defineComponent({
 
     const paginationTable = false;
 
-    console.time("Time Prime Table");
+    // console.time("Time Prime Table");
     onMounted(() => {
-      console.timeEnd("Time Prime Table");
+      // console.timeEnd("Time Prime Table");
     });
 
     return {

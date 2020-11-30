@@ -326,7 +326,7 @@ export default defineComponent({
     const clickedButton = ref<string | undefined>(undefined);
 
     const renderByName = (type: string) => {
-      console.log("type", type);
+      // console.log("type", type);
       clickedButton.value = type;
     };
 

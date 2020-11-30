@@ -43,9 +43,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Prime Select");
+    // console.time("Prime Select");
     onMounted(() => {
-      console.timeEnd("Prime Select");
+      // console.timeEnd("Prime Select");
     });
 
     return {

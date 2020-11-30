@@ -24,9 +24,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Html Button");
+    // console.time("Html Button");
     onMounted(() => {
-      console.timeEnd("Html Button");
+      // console.timeEnd("Html Button");
     });
 
     return {

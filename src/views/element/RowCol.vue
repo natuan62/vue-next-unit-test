@@ -31,10 +31,10 @@ export default defineComponent({
       });
     }
 
-    console.time("Element RowCol");
+    // console.time("Element RowCol");
 
     onMounted(() => {
-      console.timeEnd("Element RowCol");
+      // console.timeEnd("Element RowCol");
     });
 
     return {

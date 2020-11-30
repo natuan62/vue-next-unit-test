@@ -39,9 +39,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Html Tabs");
+    // console.time("Html Tabs");
     onMounted(() => {
-      console.timeEnd("Html Tabs");
+      // console.timeEnd("Html Tabs");
     });
 
     return {

@@ -28,9 +28,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Ant Input");
+    // console.time("Ant Input");
     onMounted(() => {
-      console.timeEnd("Ant Input");
+      // console.timeEnd("Ant Input");
     });
 
     return {

@@ -32,9 +32,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Quasar Card");
+    // console.time("Quasar Card");
     onMounted(() => {
-      console.timeEnd("Quasar Card");
+      // console.timeEnd("Quasar Card");
     });
 
     return {

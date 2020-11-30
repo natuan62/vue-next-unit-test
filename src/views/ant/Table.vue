@@ -52,9 +52,9 @@ export default defineComponent({
 
     const paginationTable = false;
 
-    console.time("Ant Table");
+    // console.time("Ant Table");
     onMounted(() => {
-      console.timeEnd("Ant Table");
+      // console.timeEnd("Ant Table");
     });
 
     return {

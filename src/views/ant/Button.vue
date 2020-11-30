@@ -29,9 +29,9 @@ export default defineComponent({
       });
     }
 
-    console.time("Ant Button");
+    // console.time("Ant Button");
     onMounted(() => {
-      console.timeEnd("Ant Button");
+      // console.timeEnd("Ant Button");
     });
 
     return {

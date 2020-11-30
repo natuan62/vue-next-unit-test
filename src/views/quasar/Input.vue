@@ -24,9 +24,9 @@ export default defineComponent({
         tags: ["cool", "teacher"],
       });
     }
-    console.time("Quasar Input");
+    // console.time("Quasar Input");
     onMounted(() => {
-      console.timeEnd("Quasar Input");
+      // console.timeEnd("Quasar Input");
     });
 
     return { data };

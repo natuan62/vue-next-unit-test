@@ -33,10 +33,10 @@ export default defineComponent({
       });
     }
 
-    console.time("Quasar RowCol");
+    // console.time("Quasar RowCol");
 
     onMounted(() => {
-      console.timeEnd("Quasar RowCol");
+      // console.timeEnd("Quasar RowCol");
     });
 
     return {
