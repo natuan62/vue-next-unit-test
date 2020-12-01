@@ -2,7 +2,7 @@
   <render-time />
   <div v-for="item in data" :key="item.id">
     <p>Index {{ item.id }}</p>
-    <p>TODO</p>
+     <a-switch v-model:checked="checked"/>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default defineComponent({
   setup() {
     const data = ref<unknown[]>([]);
 
-    const sliderVal = ref(null);
+    const checked = ref<boolean>(false);
 
     for (let i = 0; i < 200; i++) {
       data.value.push({
@@ -23,7 +23,7 @@ export default defineComponent({
 
     return {
       data,
-      sliderVal,
+      checked,
     };
   },
 });

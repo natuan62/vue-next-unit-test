@@ -2,7 +2,7 @@
   <render-time />
   <div v-for="item in data" :key="item.id">
     <p>Index {{ item.id }}</p>
-    <p>TODO</p>
+    <q-toggle v-model="checked" />
   </div>
 </template>
 

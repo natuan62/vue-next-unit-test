@@ -18,6 +18,7 @@ import {
   QCard,
   QTable,
   QSlider,
+  QToggle
 } from "quasar";
 
 // equal
@@ -71,6 +72,7 @@ app.use(Quasar, {
     QTab,
     QTable,
     QSlider,
+    QToggle
   },
   iconSet,
 });
