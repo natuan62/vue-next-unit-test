@@ -72,7 +72,6 @@
       </div>
       <div class="column">
         <p><b>Quasar Framework</b></p>
-        <p>Quasar input</p>
         <quasar-input />
       </div>
       <div class="column">
@@ -96,7 +95,6 @@
       </div>
       <div class="column">
         <p><b>Quasar Framework</b></p>
-        <p>Quasar rowcol</p>
         <quasar-rowcol />
       </div>
       <div class="column">
@@ -166,7 +164,6 @@
       </div>
       <div class="column">
         <p><b>Quasar Framework</b></p>
-        <p>Quasar tabs</p>
         <quasar-tabs />
       </div>
       <div class="column">
@@ -210,7 +207,6 @@
       </div>
       <div class="column">
         <p><b>Quasar Framework</b></p>
-        <p>Quasar tabs</p>
         <quasar-slider />
       </div>
       <div class="column">
@@ -234,7 +230,6 @@
       </div>
       <div class="column">
         <p><b>Quasar Framework</b></p>
-        <p>Quasar switch</p>
         <quasar-switch />
       </div>
       <div class="column">
@@ -246,12 +241,47 @@
         <element-switch />
       </div>
     </div>
+   
+     <div class="row" v-if="clickedButton === 'collapse'">
+      <div class="column">
+        <p><b>HTML</b></p>
+        <html-collapse />
+      </div>
+      <div class="column">
+        <p><b>Ant design</b></p>
+        <ant-collapse />
+      </div>
+      <div class="column">
+        <p><b>Quasar Framework</b></p>
+        <quasar-collapse />
+      </div>
+      <div class="column">
+        <p><b>PrimeVue Framework</b></p>
+        <prime-collapse />
+      </div>
+      <div class="column">
+        <p><b>Element-plus Framework</b></p>
+        <element-collapse />
+      </div>
+    </div>
 
   </div>
 </template>
 
 <script lang="ts">
 import { defineAsyncComponent, defineComponent, ref } from "vue";
+const AntCollapse = defineAsyncComponent(() => import("@/views/ant/Collapse.vue"));
+const HtmlCollapse = defineAsyncComponent(
+  () => import("@/views/html/Collapse.vue")
+);
+const QuasarCollapse = defineAsyncComponent(
+  () => import("@/views/quasar/Collapse.vue")
+);
+const ElementCollapse = defineAsyncComponent(
+  () => import("@/views/element/Collapse.vue")
+);
+const PrimeCollapse = defineAsyncComponent(() => import("./prime/Collapse.vue"));
+
 const AntSwitch = defineAsyncComponent(() => import("@/views/ant/Switch.vue"));
 const HtmlSwitch = defineAsyncComponent(
   () => import("@/views/html/Switch.vue")
@@ -415,6 +445,12 @@ export default defineComponent({
     "quasar-switch": QuasarSwitch,
     "element-switch": ElementSwitch,
     "prime-switch": PrimeSwitch,
+   
+    "ant-collapse": AntCollapse,
+    "html-collapse": HtmlCollapse,
+    "quasar-collapse": QuasarCollapse,
+    "element-collapse": ElementCollapse,
+    "prime-collapse": PrimeCollapse,
 
     slider: Slider,
   },
@@ -435,6 +471,7 @@ export default defineComponent({
       { link: "tabs", name: "Tabs" },
       { link: "slider", name: "Slider" },
       { link: "switch", name: "Switch" },
+      { link: "collapse", name: "Collapse" },
     ];
 
     const clickedButton = ref<string | undefined>(undefined);

@@ -18,7 +18,9 @@ import {
   QCard,
   QTable,
   QSlider,
-  QToggle
+  QToggle,
+  QList,
+  QExpansionItem,
 } from "quasar";
 
 // equal
@@ -39,7 +41,9 @@ import PCard from "primevue/card";
 import PTabView from "primevue/tabview";
 import PTabPanel from "primevue/tabpanel";
 import PSlider from "primevue/slider";
-import PInputSwitch from 'primevue/inputswitch';
+import PInputSwitch from "primevue/inputswitch";
+import PAccordion from 'primevue/accordion';
+import PAccordionTab from 'primevue/accordiontab';
 
 // element-plus
 import ElementPlus from "element-plus";
@@ -72,7 +76,9 @@ app.use(Quasar, {
     QTab,
     QTable,
     QSlider,
-    QToggle
+    QToggle,
+    QList,
+    QExpansionItem,
   },
   iconSet,
 });
@@ -88,6 +94,8 @@ app.component("PTabView", PTabView);
 app.component("PTabPanel", PTabPanel);
 app.component("PSlider", PSlider);
 app.component("PInputSwitch", PInputSwitch);
+app.component("PAccordion", PAccordion);
+app.component("PAccordionTab", PAccordionTab);
 
 app.component("render-time", RenderTime);
 
