@@ -2,12 +2,12 @@
   <render-time />
   <div v-for="item in data" :key="item.id">
     <p>Index {{ item.id }}</p>
-    <div v-for="(item2, index) in item.collapse" :key="index" ref="collapseRef">
-      <button class="collapsible">
+    <div v-for="(item2, index) in item.collapse" :key="index">
+      <button class="collapsible" :class="{'active': toggle === index}" @click="toggleCollapse(index)">
         {{ item2.header }}
       </button>
-      <div class="content">
-        <p>{{ item2.content }}</p>
+      <div class="content" v-if="toggle === index">
+        {{item2.content}}
       </div>
     </div>
   </div>
@@ -20,10 +20,6 @@ export default defineComponent({
   setup() {
     const data = ref<unknown[]>([]);
 
-    const sliderVal = ref(null);
-
-    const collapseRef = ref<HTMLElement | null>(null);
-
     for (let i = 0; i < 200; i++) {
       data.value.push({
         id: `${i + 1}`,
@@ -34,11 +30,17 @@ export default defineComponent({
         ],
       });
     }
+    
+    const toggle = ref<number | undefined>(undefined);
+    
+    const toggleCollapse = (index: number) => {
+      toggle.value = index;
+    };
 
     return {
       data,
-      sliderVal,
-      collapseRef,
+      toggleCollapse,
+      toggle,
     };
   },
 });
@@ -49,7 +51,7 @@ export default defineComponent({
   background-color: #777;
   color: white;
   cursor: pointer;
-  padding: 18px;
+  padding: 12px;
   width: 100%;
   border: none;
   text-align: left;
@@ -76,9 +78,8 @@ export default defineComponent({
 
 .content {
   padding: 0 18px;
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  height: 45px;
   background-color: #f1f1f1;
 }
 </style>
